@@ -1,15 +1,7 @@
-import Image from 'next/image';
-
+import { BookData } from '@/constants/books/type';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import Link from 'next/link';
-
-export type BookData = {
-  id?: string;
-  cover: string;
-  name: string;
-  description: string;
-  price: number;
-};
 
 interface BookCardProps extends React.HTMLAttributes<HTMLDivElement> {
   book: BookData;

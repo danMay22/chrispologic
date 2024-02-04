@@ -28,7 +28,7 @@ export default function TestimonySection() {
             </blockquote>
           </div>
           <div className='col-end-1 w-16 lg:row-span-4 lg:w-72'>
-            <div className='relative h-64 w-full rounded-xl lg:rounded-3xl'>
+            <div className='relative h-16 sm:h-64 w-full rounded-xl lg:rounded-3xl'>
               <Image
                 className='h-full w-full object-cover rounded-xl lg:rounded-3xl'
                 src='/images/home/hero-section.jpg'

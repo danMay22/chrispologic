@@ -1,6 +1,6 @@
 export default function AboutUsDescriptionSection() {
   return (
-    <section className='isolate overflow-hidden bg-white px-36 lg:px-40'>
+    <section className='isolate overflow-hidden bg-white px-4 lg:px-40'>
       <div className='w-full max-w-xl lg:shrink-0 xl:max-w-2xl'>
         <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
           We’re changing the way people connect.

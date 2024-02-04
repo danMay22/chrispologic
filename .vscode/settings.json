@@ -37,7 +37,7 @@
 
   "prettier.trailingComma": "all",
 
-  "cSpell.words": ["tailwindcss"],
+  "cSpell.words": ["bootcamp", "Popover", "tailwindcss"],
 
   "editor.formatOnPaste": false,
 

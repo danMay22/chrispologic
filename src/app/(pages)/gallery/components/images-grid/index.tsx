@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/carousel';
 
 import { Dialog, DialogContent } from '@/components/ui/dialog';
+import Image from 'next/image';
 import { useState } from 'react';
 
 type ImagesGridProps = {
@@ -33,10 +34,12 @@ export function ImagesGrid({ children, photos }: ImagesGridProps) {
         {photos.map((photo) => (
           <div key={photo} className='group relative'>
             <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>
-              <img
+              <Image
                 onClick={openModal}
                 src={photo}
+                alt=''
                 className='h-full w-full object-cover object-center lg:h-full lg:w-full'
+                layout='fill'
               />
             </div>
           </div>
@@ -45,14 +48,24 @@ export function ImagesGrid({ children, photos }: ImagesGridProps) {
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent
-          className='max-w-4xl px-8 h-[40rem] flex'
+          className='sm:max-w-4xl max-w-xs px-8 sm:h-[40rem] h-96 flex'
           onInteractOutside={(e) => {
             e.preventDefault();
           }}
         >
-          <Carousel>
-            <CarouselContent>
-              <CarouselItem>...</CarouselItem>
+          <Carousel className='w-full'>
+            <CarouselContent className='sm:h-[37rem] h-80'>
+              {photos.map((photo) => (
+                <CarouselItem key={photo} className='relative'>
+                  <Image
+                    onClick={openModal}
+                    src={photo}
+                    alt=''
+                    className='h-full w-full object-contain object-center lg:h-full lg:w-full'
+                    layout='fill'
+                  />
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />

@@ -1,10 +1,17 @@
 'use client';
 
 import { Icons } from '@/components/ui/icons';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
+import { MenuIcon } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Button } from '../button';
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -18,7 +25,7 @@ export function SiteHeader() {
             <span className='inline-block font-bold'>{siteConfig.name}</span>
           </Link>
 
-          <nav className='flex gap-6'>
+          <nav className='lg:flex gap-6 hidden'>
             {siteConfig.mainNav.map((nav) => (
               <Link
                 key={nav.href}
@@ -40,6 +47,38 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
+
+          <div className='lg:hidden'>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button variant='ghost' size='icon'>
+                  <MenuIcon className='h-6 w-6' />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className='w-screen rounded-t-none space-y-2'>
+                {siteConfig.mainNav.map((nav) => (
+                  <Link
+                    key={nav.href}
+                    href={nav.href}
+                    className={cn(
+                      'text-sm font-medium transition-colors hover:text-primary w-full block py-2',
+                      (
+                        nav.href
+                          ? nav.href === '/'
+                            ? pathname === nav.href
+                            : pathname.includes(nav.href || '')
+                          : false
+                      )
+                        ? 'text-muted-foreground'
+                        : '',
+                    )}
+                  >
+                    {nav.title}
+                  </Link>
+                ))}
+              </PopoverContent>
+            </Popover>
+          </div>
         </div>
       </div>
     </header>
