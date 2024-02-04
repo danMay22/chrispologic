@@ -1,3 +1,88 @@
 {
-  "extends": "next/core-web-vitals"
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "turbo",
+    "prettier",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["tailwindcss"],
+  "rules": {
+    "@next/next/no-html-link-for-pages": "off",
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "error",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/space-before-blocks": "off",
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "arrow-body-style": ["error", "as-needed"],
+    "import/extensions": "off",
+    "indent": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-control-regex": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-relative-import-paths/no-relative-import-paths": [
+      "error",
+      {
+        "allowSameFolder": true,
+        "rootDir": "src",
+        "prefix": ""
+      }
+    ],
+    "no-use-before-define": "off",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": ["return", "export"]
+      },
+      {
+        "blankLine": "always",
+        "prev": "block-like",
+        "next": "*"
+      }
+    ],
+    "react/jsx-filename-extension": [0],
+    "react/jsx-boolean-value": ["error"],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "props": "never",
+        "children": "never",
+        "propElementValues": "always"
+      }
+    ],
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": false
+      }
+    ],
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "space-before-blocks": "off",
+    "testing-library/no-node-access": [
+      "error",
+      {
+        "allowContainerFirstChild": true
+      }
+    ]
+  },
+  "settings": {
+    "tailwindcss": {
+      "callees": ["cn", "cva"],
+      "config": "tailwind.config.cjs"
+    },
+    "next": {
+      "rootDir": ["apps/*/"]
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
 }
