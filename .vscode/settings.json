@@ -1,0 +1,51 @@
+{
+  "git.ignoreMissingGitWarning": true,
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+
+  "editor.formatOnSave": true,
+
+  "git.enableSmartCommit": true,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "eslint.alwaysShowStatus": true,
+
+  "eslint.format.enable": true,
+
+  "prettier.singleQuote": true,
+
+  "prettier.jsxSingleQuote": true,
+
+  "prettier.trailingComma": "all",
+
+  "cSpell.words": ["tailwindcss"],
+
+  "editor.formatOnPaste": false,
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+
+  "cSpell.language": "en-GB",
+
+  "workbench.editor.empty.hint": "hidden"
+}
