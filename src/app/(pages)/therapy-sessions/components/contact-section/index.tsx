@@ -44,7 +44,7 @@ export default function ContactSection() {
                     We are at 6 Albury Road, Corner Jan Smut, Albury Office
                     Park,
                     <br />
-                    Dunkeld West Unit 4, Suit no. 61
+                    Dunkeld West Unit 4, Suit no.61
                   </p>
                 </div>
               </div>
