@@ -1,5 +1,6 @@
 import TimelineSection from '@/components/ui/timeline-section';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import BooksSection from './components/books-section';
 import HeroSection from './components/hero-section';
 
@@ -16,6 +17,18 @@ export default function Page() {
       <HeroSection />
 
       <BooksSection />
+      <a
+        className='fixed bottom-4 right-4'
+        aria-label='Chat on WhatsApp'
+        href='https://wa.link/bakhedlaminiconsultancy'
+      >
+        <Image
+          alt='Chat on WhatsApp'
+          src='/images/download.png'
+          width={224}
+          height={80}
+        />
+      </a>
     </>
   );
 }

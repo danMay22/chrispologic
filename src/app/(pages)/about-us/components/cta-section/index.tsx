@@ -22,7 +22,7 @@ export default function CTASection() {
 
               <div className='mt-10 flex'>
                 <a
-                  href='#'
+                  href='/seminars'
                   className='text-sm font-semibold leading-6 text-primary'
                 >
                   Reach out <span aria-hidden='true'>&rarr;</span>

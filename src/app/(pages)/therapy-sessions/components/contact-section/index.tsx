@@ -48,6 +48,20 @@ export default function ContactSection() {
                   </p>
                 </div>
               </div>
+              <div className='flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10'>
+                <PhoneIcon
+                  className='h-7 w-5 flex-none text-indigo-400'
+                  aria-hidden='true'
+                />
+                <div className='text-base leading-7'>
+                  <h3 className='font-semibold text-foreground'>
+                    Book Speaker
+                  </h3>
+                  <p className='mt-2 text-foreground/60'>
+                    Bookings@bakhedlamini.co.za
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

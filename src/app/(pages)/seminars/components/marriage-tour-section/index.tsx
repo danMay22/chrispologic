@@ -1,6 +1,55 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-
+const cities = [
+  {
+    name: 'Fountains Hotel Cape Town',
+    description: '23 March',
+  },
+  {
+    name: 'Bon hotel Bloemfontein',
+    description: '27 April',
+  },
+  {
+    name: 'Avani Gaborone',
+    description: '25 May',
+  },
+  {
+    name: 'Radisson Blu Durban',
+    description: '1 June',
+  },
+  {
+    name: 'Meropa Polokwane',
+    description: '26 July',
+  },
+  {
+    name: 'Hunters Rest Anew Rustenburg',
+    description: '27 July',
+  },
+  {
+    name: 'Premier East London',
+    description: '2 Aug',
+  },
+  {
+    name: 'Boardwalk Port Elizabeth',
+    description: '3 Aug',
+  },
+  {
+    name: 'The Ridge Witbank',
+    description: '31 Aug',
+  },
+  {
+    name: 'Emnotweni Mbombela',
+    description: '28 Sept',
+  },
+  {
+    name: 'Maslow Sandton',
+    description: '26 Oct',
+  },
+  {
+    name: 'Southern Sun Pretoria',
+    description: '30 Nov',
+  },
+];
 export default function MarriageTourSection() {
   return (
     <section className='relative isolate overflow-hidden pt-10'>
@@ -14,21 +63,22 @@ export default function MarriageTourSection() {
               role='list'
               className='mt-10 bg-white/60  grid grid-cols-2 gap-4'
             >
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => (
+              {cities.map((city) => (
                 <li
-                  key={i}
+                  key={city.name}
                   className='border p-4'
                   aria-label='Steven McHail talking about Not so one-time payments at 9:00AM - 10:00AM PST'
                 >
-                  <h4 className='text-lg font-semibold tracking-tight text-blue-900'>
-                    Steven McHail
+                  <h4 className='text-lg font-semibold tracking-tight text-gray-800'>
+                    {city.name}
                   </h4>
-                  <p className='mt-1 tracking-tight text-blue-900'>
-                    Not so one-time payments
+                  <p className='mt-1 tracking-tight text-gray-800'>
+                    {' '}
+                    {city.description}
                   </p>
                   <p className='mt-1 font-mono text-sm text-slate-500'>
-                    <time dateTime='2022-04-04T9:00AM-08:00'>9:00AM</time>{' '}
-                    <time dateTime='2022-04-04T10:00AM-08:00'>10:00AM</time>
+                    <time dateTime='2022-04-04T9:00AM-08:00'>3:00PM</time>{' '}
+                    <time dateTime='2022-04-04T10:00AM-08:00'>07:00PM</time>
                   </p>
                 </li>
               ))}
