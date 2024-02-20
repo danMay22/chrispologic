@@ -1,6 +1,6 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ImagesGrid } from './components/images-grid';
 import SelectTab from './components/select-tab';
 import { GALLERY } from './data';
@@ -11,6 +11,11 @@ export default function Page() {
   const [selectedFolder, setSelectedFolder] = useState(
     folders[0].toLowerCase(),
   );
+  const [photos, setPhotos] = useState<string[]>(data[selectedFolder]);
+
+  useEffect(() => {
+    setPhotos(data[selectedFolder]);
+  }, [selectedFolder]);
 
   return (
     <>
@@ -23,17 +28,17 @@ export default function Page() {
           <SelectTab folders={folders} />
 
           <div className='hidden sm:block'>
-            <div className='border-b border-gray-200 py-4'>
+            <div className='border-b border-gray-200 pt-4'>
               <nav className='-mb-px flex space-x-8' aria-label='Tabs'>
                 {folders.map((folder) => (
                   <span
                     onClick={() => setSelectedFolder(folder.toLowerCase())}
                     key={folder}
                     className={cn(
-                      false
-                        ? 'border-indigo-500 text-indigo-600'
+                      selectedFolder === folder.toLowerCase()
+                        ? 'border-primary text-primary'
                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                      'whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium capitalize',
+                      'whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium capitalize cursor-pointer',
                     )}
                     aria-current={false ? 'page' : undefined}
                   >
@@ -44,7 +49,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <ImagesGrid photos={data[selectedFolder]} />
+        <ImagesGrid photos={photos ?? []} />
       </div>
     </>
   );
