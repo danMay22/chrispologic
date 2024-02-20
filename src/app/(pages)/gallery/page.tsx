@@ -13,6 +13,10 @@ export default function Page() {
   );
   const [photos, setPhotos] = useState<string[]>(data[selectedFolder]);
 
+  console.log('data', data);
+
+  console.log('photos', photos);
+
   useEffect(() => {
     setPhotos(data[selectedFolder]);
   }, [selectedFolder]);
