@@ -1,7 +1,8 @@
+'use client';
 import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
-import Link from 'next/link';
 // import Carousel from '../component/UI/carousel';
+import { useState } from 'react';
 import { ImagesGrid } from './components/images-grid';
 import SelectTab from './components/select-tab';
 import { GALLERY } from './data';
@@ -11,11 +12,12 @@ export const metadata: Metadata = {
   description: 'This is the gallery page of the app',
 };
 
-export default async function Page(props: any) {
-  const data: Record<string, string[]> = GALLERY;
+export default function Page() {
+  const [data] = useState<Record<string, string[]>>(GALLERY);
   const folders = ['bakhe-dlamini', 'bootcamp', 'seminars'];
-  const selectedFolder = (props.searchParams.tabs || folders[0])?.toLowerCase();
-  const photos = data[selectedFolder];
+  const [selectedFolder, setSelectedFolder] = useState(
+    folders[0].toLowerCase(),
+  );
 
   return (
     <div className='bg-background bg-cover min-h-96'>
@@ -31,26 +33,25 @@ export default async function Page(props: any) {
             <div className='border-b border-gray-200 py-4'>
               <nav className='-mb-px flex space-x-8' aria-label='Tabs'>
                 {folders.map((folder) => (
-                  <Link key={folder} href={`?tabs=${folder.toLowerCase()}`}>
-                    <span
-                      key={folder}
-                      className={cn(
-                        false
-                          ? 'border-indigo-500 text-indigo-600'
-                          : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                        'whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium capitalize',
-                      )}
-                      aria-current={false ? 'page' : undefined}
-                    >
-                      {folder.replace('-', ' ')}
-                    </span>
-                  </Link>
+                  <span
+                    onClick={() => setSelectedFolder(folder.toLowerCase())}
+                    key={folder}
+                    className={cn(
+                      false
+                        ? 'border-indigo-500 text-indigo-600'
+                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
+                      'whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium capitalize',
+                    )}
+                    aria-current={false ? 'page' : undefined}
+                  >
+                    {folder.replace('-', ' ')}
+                  </span>
                 ))}
               </nav>
             </div>
           </div>
         </div>
-        <ImagesGrid photos={photos}>
+        <ImagesGrid photos={data[selectedFolder]}>
           <p>SSS</p>
           {/* <Carousel photos={photos} /> */}
         </ImagesGrid>
