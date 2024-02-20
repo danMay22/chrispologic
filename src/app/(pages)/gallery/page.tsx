@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default async function Page({ searchParams }: any) {
   const file = await fs.readFile(
-    process.cwd() + '/src/app/(pages)/gallery/data/data.json',
+    'src/app/(pages)/gallery/data/data.json',
     'utf8',
   );
   const data: Record<string, string[]> = JSON.parse(file);
