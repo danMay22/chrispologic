@@ -7,7 +7,7 @@ export default function TimelineSection() {
         className='h-full w-full sm:object-contain object-cover rounded-sm'
         src='/images/home/timeline-section.jpg'
         alt='hero section image'
-        layout='fill'
+        fill
       />
     </section>
   );

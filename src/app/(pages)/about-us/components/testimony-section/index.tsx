@@ -33,7 +33,7 @@ export default function TestimonySection() {
                 className='h-full w-full object-cover rounded-xl lg:rounded-3xl'
                 src='/images/home/hero-section.jpg'
                 alt='hero section image'
-                layout='fill'
+                fill
               />
             </div>
           </div>

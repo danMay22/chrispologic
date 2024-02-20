@@ -11,7 +11,7 @@ export default function CTASection() {
                 className='h-full w-full object-cover rounded-2xl'
                 src='/images/about-us/dlamini-couple.jpg'
                 alt=''
-                layout='fill'
+                fill
               />
             </div>
             <div className='w-full flex-auto'>

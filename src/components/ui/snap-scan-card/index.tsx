@@ -20,7 +20,7 @@ export default function SnapScanCard() {
                     src='/images/payment/snap-scan.jpg'
                     alt='snap-scan'
                     className='h-full w-full object-contain object-center sm:h-full sm:w-full'
-                    layout='fill'
+                    fill
                   />
                 </a>
               </div>

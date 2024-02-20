@@ -89,7 +89,7 @@ export default function MarriageTourSection() {
               src='/images/seminars/marriage-seminars.jpg'
               alt=''
               className='h-full w-full object-cover object-center sm:h-full sm:w-full rounded-2xl'
-              layout='fill'
+              fill
             />
           </div>
 

@@ -39,7 +39,7 @@ export function ImagesGrid({ children, photos }: ImagesGridProps) {
                 src={photo}
                 alt=''
                 className='h-full w-full object-cover object-center lg:h-full lg:w-full'
-                layout='fill'
+                fill
               />
             </div>
           </div>
@@ -62,7 +62,7 @@ export function ImagesGrid({ children, photos }: ImagesGridProps) {
                     src={photo}
                     alt=''
                     className='h-full w-full object-contain object-center lg:h-full lg:w-full'
-                    layout='fill'
+                    fill
                   />
                 </CarouselItem>
               ))}

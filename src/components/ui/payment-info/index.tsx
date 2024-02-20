@@ -53,7 +53,7 @@ export default function PaymentInfo({ product }: PaymentInfoProps) {
                 src={product.imageSrc}
                 alt={product.imageAlt}
                 className='h-full w-full object-contain object-center'
-                layout='fill'
+                fill
               />
             </div>
           </div>

@@ -30,7 +30,7 @@ export default function BootCampSection() {
                   src='/images/seminars/bootcamp-2.jpg'
                   alt=''
                   className='h-full w-full object-cover object-center sm:h-full sm:w-full rounded-2xl'
-                  layout='fill'
+                  fill
                 />
               </div>
             </div>
@@ -41,7 +41,7 @@ export default function BootCampSection() {
                     src='/images/seminars/bootcamp-1.jpg'
                     alt=''
                     className='h-full w-full object-cover object-center sm:h-full sm:w-full rounded-2xl'
-                    layout='fill'
+                    fill
                   />
                 </div>
               </div>
@@ -51,7 +51,7 @@ export default function BootCampSection() {
                     src='/images/seminars/bootcamp.jpg'
                     alt=''
                     className='h-full w-full object-cover object-center sm:h-full sm:w-full rounded-2xl'
-                    layout='fill'
+                    fill
                   />
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function BootCampSection() {
                     src='/images/seminars/bootcamp-3.jpg'
                     alt=''
                     className='h-full w-full object-cover object-center sm:h-full sm:w-full rounded-2xl'
-                    layout='fill'
+                    fill
                   />
                 </div>
               </div>

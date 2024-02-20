@@ -40,7 +40,7 @@ export default function Page() {
                       src='/images/therapy-sessions/therapy-session-1.jpeg'
                       className='h-full w-full object-cover object-center'
                       alt='therapy session image'
-                      layout='fill'
+                      fill
                     />
                   </div>
                   <p className='mt-8 text-base text-muted-foreground'>
@@ -55,7 +55,7 @@ export default function Page() {
                       src='/images/therapy-sessions/therapy-session-2.jpeg'
                       className='h-full w-full object-cover object-center'
                       alt='therapy session image'
-                      layout='fill'
+                      fill
                     />
                   </div>
                   <p className='mt-8 text-base text-muted-foreground'>
