@@ -1,4 +1,4 @@
-{
+export const GALLERY = {
   "bakhe-dlamini": [
     "/images/gallery/bakhe-dlamini/IMG-20240121-WA0004.jpg",
     "/images/gallery/bakhe-dlamini/IMG-20240121-WA0005.jpg",

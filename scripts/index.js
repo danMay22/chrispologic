@@ -19,4 +19,4 @@ const data = folders.reduce((acc, folder) => {
   };
 }, {});
 
-fs.writeFileSync('src/app/(pages)/gallery/data/data.json', JSON.stringify(data, null, 2));
+fs.writeFileSync('src/app/(pages)/gallery/data/index.ts', `export const GALLERY = ${JSON.stringify(data, null, 2)}`);

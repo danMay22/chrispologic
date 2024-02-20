@@ -1,24 +1,28 @@
 import { cn } from '@/lib/utils';
-import { promises as fs } from 'fs';
 import { Metadata } from 'next';
 import Link from 'next/link';
 // import Carousel from '../component/UI/carousel';
 import { ImagesGrid } from './components/images-grid';
 import SelectTab from './components/select-tab';
+import { GALLERY } from './data';
 
 export const metadata: Metadata = {
   title: 'Gallery Page',
   description: 'This is the gallery page of the app',
 };
 
-export default async function Page({ searchParams }: any) {
-  const file = await fs.readFile(
-    'src/app/(pages)/gallery/data/data.json',
-    'utf8',
-  );
-  const data: Record<string, string[]> = JSON.parse(file);
+const getData = async () => {
+  const response = await fetch('http://localhost:3000/api/gallery', {
+    cache: 'no-cache',
+  });
+  const data = await response.json();
+  return data;
+};
+
+export default async function Page(props: any) {
+  const data: Record<string, string[]> = GALLERY;
   const folders = Object.keys(data);
-  const selectedFolder = (searchParams.tabs || folders[0])?.toLowerCase();
+  const selectedFolder = (props.searchParams.tabs || folders[0])?.toLowerCase();
   const photos = data[selectedFolder];
 
   return (
