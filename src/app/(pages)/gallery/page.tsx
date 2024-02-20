@@ -1,16 +1,9 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { Metadata } from 'next';
-// import Carousel from '../component/UI/carousel';
 import { useState } from 'react';
 import { ImagesGrid } from './components/images-grid';
 import SelectTab from './components/select-tab';
 import { GALLERY } from './data';
-
-export const metadata: Metadata = {
-  title: 'Gallery Page',
-  description: 'This is the gallery page of the app',
-};
 
 export default function Page() {
   const [data] = useState<Record<string, string[]>>(GALLERY);
@@ -51,10 +44,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <ImagesGrid photos={data[selectedFolder]}>
-          <p>SSS</p>
-          {/* <Carousel photos={photos} /> */}
-        </ImagesGrid>
+        <ImagesGrid photos={data[selectedFolder]} />
       </div>
     </div>
   );

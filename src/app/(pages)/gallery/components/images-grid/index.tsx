@@ -13,11 +13,11 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 type ImagesGridProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   photos: string[];
 };
 
-export function ImagesGrid({ children, photos }: ImagesGridProps) {
+export function ImagesGrid({ photos }: ImagesGridProps) {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
