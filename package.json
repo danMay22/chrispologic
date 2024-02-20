@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && mv ./public ./.next/standalone && mv ./.next/static ./.next/standalone/.next",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "create-file": "node ./scripts/index.js"
