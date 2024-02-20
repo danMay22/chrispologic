@@ -10,5 +10,5 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return { children };
+  return <div className='bg-background bg-cover min-h-96'>{children}</div>;
 }
