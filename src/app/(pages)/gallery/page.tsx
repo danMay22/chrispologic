@@ -1,32 +1,25 @@
 import { cn } from '@/lib/utils';
-import fs from 'fs';
+import { promises as fs } from 'fs';
 import { Metadata } from 'next';
 import Link from 'next/link';
 // import Carousel from '../component/UI/carousel';
 import { ImagesGrid } from './components/images-grid';
 import SelectTab from './components/select-tab';
 
-const path = 'public/images/gallery';
-
-const folders = fs.readdirSync(path).filter((file) => {
-  return fs.statSync(`${path}/${file}`).isDirectory();
-});
-
 export const metadata: Metadata = {
   title: 'Gallery Page',
   description: 'This is the gallery page of the app',
 };
 
-export default function Page({ searchParams }: any) {
+export default async function Page({ searchParams }: any) {
+  const file = await fs.readFile(
+    process.cwd() + '/src/app/(pages)/gallery/data/data.json',
+    'utf8',
+  );
+  const data: Record<string, string[]> = JSON.parse(file);
+  const folders = Object.keys(data);
   const selectedFolder = (searchParams.tabs || folders[0])?.toLowerCase();
-
-  const photoPath = `${path}/${selectedFolder}`;
-  const photos = fs
-    .readdirSync(photoPath)
-    .filter((file) => {
-      return !fs.statSync(`${photoPath}/${file}`).isDirectory();
-    })
-    .map((photo) => `${photoPath}/${photo}`.replace('public', ''));
+  const photos = data[selectedFolder];
 
   return (
     <div className='bg-background bg-cover min-h-96'>

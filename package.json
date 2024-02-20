@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && mv ./public ./.next/standalone && mv ./.next/static ./.next/standalone/.next",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "create-file": "node ./scripts/index.js"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
