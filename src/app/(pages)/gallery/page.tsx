@@ -39,7 +39,7 @@ export default async function Page(props: any) {
             <div className='border-b border-gray-200 py-4'>
               <nav className='-mb-px flex space-x-8' aria-label='Tabs'>
                 {folders.map((folder) => (
-                  <Link key={folder} href={`?tabs=${folder}`}>
+                  <Link key={folder} href={`?tabs=${folder.toLowerCase()}`}>
                     <span
                       key={folder}
                       className={cn(
