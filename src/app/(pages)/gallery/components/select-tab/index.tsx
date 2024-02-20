@@ -4,9 +4,10 @@ import { useRouter } from 'next/navigation';
 
 type SelectTabProps = {
   folders: string[];
+  onChange: (folder: string) => void;
 };
 
-export default function SelectTab({ folders }: SelectTabProps) {
+export default function SelectTab({ folders, onChange }: SelectTabProps) {
   const router = useRouter();
   return (
     <div className='sm:hidden'>
@@ -20,11 +21,13 @@ export default function SelectTab({ folders }: SelectTabProps) {
         className='block w-full rounded-md border-foreground px-1 py-2 bg-muted-foreground/10'
         defaultValue={folders.find((folder) => folder)}
         onChange={(e) => {
-          router.push(`?tabs=${e.target.value}`);
+          onChange(e.target.value);
         }}
       >
         {folders.map((folder) => (
-          <option key={folder}>{folder}</option>
+          <option key={folder} value={folder}>
+            {folder}
+          </option>
         ))}
       </select>
     </div>

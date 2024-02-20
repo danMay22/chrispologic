@@ -7,15 +7,9 @@ import { GALLERY } from './data';
 
 export default function Page() {
   const [data] = useState<Record<string, string[]>>(GALLERY);
-  const folders = ['bakhe-dlamini', 'bootcamp', 'seminars'];
-  const [selectedFolder, setSelectedFolder] = useState(
-    folders[0].toLowerCase(),
-  );
+  const [folders] = useState(Object.keys(data));
+  const [selectedFolder, setSelectedFolder] = useState(folders[0]);
   const [photos, setPhotos] = useState<string[]>(data[selectedFolder]);
-
-  console.log('data', data);
-
-  console.log('photos', photos);
 
   useEffect(() => {
     setPhotos(data[selectedFolder]);
@@ -29,17 +23,17 @@ export default function Page() {
         </h2>
 
         <div className='pb-6'>
-          <SelectTab folders={folders} />
+          <SelectTab folders={folders} onChange={setSelectedFolder} />
 
           <div className='hidden sm:block'>
             <div className='border-b border-gray-200 pt-4'>
               <nav className='-mb-px flex space-x-8' aria-label='Tabs'>
                 {folders.map((folder) => (
                   <span
-                    onClick={() => setSelectedFolder(folder.toLowerCase())}
+                    onClick={() => setSelectedFolder(folder)}
                     key={folder}
                     className={cn(
-                      selectedFolder === folder.toLowerCase()
+                      selectedFolder === folder
                         ? 'border-primary text-primary'
                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
                       'whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium capitalize cursor-pointer',
