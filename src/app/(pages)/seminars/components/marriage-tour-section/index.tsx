@@ -1,52 +1,70 @@
-import { Button } from '@/components/ui/button';
+import BankingDetails from '@/components/ui/banking-details';
+import SnapScanCard from '@/components/ui/snap-scan-card';
 import Image from 'next/image';
 const cities = [
   {
-    name: 'Fountains Hotel Cape Town',
-    description: '23 March',
+    name: 'Premier Hotel',
+    city: 'Richardsbay',
+    description: '09 March',
   },
   {
-    name: 'Bon hotel Bloemfontein',
+    name: 'Blue Lagoon',
+    city: 'Cape Town',
+    description: '06 April',
+  },
+  {
+    name: 'Bon hotel',
+    city: 'Bloemfontein',
     description: '27 April',
   },
   {
-    name: 'Avani Gaborone',
-    description: '25 May',
+    name: 'Avani',
+    city: 'Gaborone',
+    description: '04 May',
   },
   {
-    name: 'Radisson Blu Durban',
-    description: '1 June',
+    name: 'Radisson Blu',
+    city: 'Durban',
+    description: '01 June',
   },
   {
-    name: 'Meropa Polokwane',
-    description: '26 July',
+    name: 'Meropa ',
+    city: 'Polokwane',
+    description: '22 June',
   },
   {
-    name: 'Hunters Rest Anew Rustenburg',
-    description: '27 July',
+    name: 'Hunters Rest Anew',
+    city: 'Rustenburg',
+    description: '06 July',
   },
   {
-    name: 'Premier East London',
-    description: '2 Aug',
+    name: 'Premier',
+    city: 'East London',
+    description: '02 Aug',
   },
   {
-    name: 'Boardwalk Port Elizabeth',
-    description: '3 Aug',
+    name: 'Boardwalk',
+    city: 'Port Elizabeth',
+    description: '03 Aug',
   },
   {
-    name: 'The Ridge Witbank',
+    name: 'Anew Hotel',
+    city: 'Witbank',
     description: '31 Aug',
   },
   {
-    name: 'Emnotweni Mbombela',
+    name: 'Emnotweni ',
+    city: 'Mbombela',
     description: '28 Sept',
   },
   {
-    name: 'Maslow Sandton',
+    name: 'Southern Sun ',
+    city: 'Sandton',
     description: '26 Oct',
   },
   {
-    name: 'Southern Sun Pretoria',
+    name: 'Southern Sun ',
+    city: 'Pretoria',
     description: '30 Nov',
   },
 ];
@@ -58,6 +76,28 @@ export default function MarriageTourSection() {
           <h1 className='max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto'>
             The Recharge Your Marriage 2024 Tour
           </h1>
+          <div className='mt-10 relative aspect-[6/5] w-full max-w-lg rounded-2xl sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36'>
+            <Image
+              src='/images/seminars/marriage-seminars.jpg'
+              alt=''
+              className='h-full w-full object-cover object-center sm:h-full sm:w-full rounded-2xl'
+              layout='fill'
+            />
+          </div>
+          <div>
+            <h4 className='py-2 max-w-2xl text-xl  lg:text-2xl font-light tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto'>
+              Ticket, R1500 per couples
+              <br /> Includes refreshments.
+            </h4>
+            <p className='text-xl lg:text-xl font-light tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto'>
+              Friday events: 6:00PM-9:45PM
+              <br /> Saturday events: 3:00PM-7:00PM
+            </p>
+          </div>
+          <div>
+            <SnapScanCard />
+            <BankingDetails />
+          </div>
           <div className='mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1'>
             <ol
               role='list'
@@ -72,29 +112,20 @@ export default function MarriageTourSection() {
                   <h4 className='text-lg font-semibold tracking-tight text-gray-800'>
                     {city.name}
                   </h4>
+                  <h2 className='font-semibold tracking-tight text-gray-800'>
+                    {city.city}
+                  </h2>
                   <p className='mt-1 tracking-tight text-gray-800'>
                     {' '}
                     {city.description}
                   </p>
                   <p className='mt-1 font-mono text-sm text-slate-500'>
-                    <time dateTime='2022-04-04T9:00AM-08:00'>3:00PM</time>{' '}
+                    <time dateTime='2022-04-04T9:00AM-08:00'>3:00PM - </time>{' '}
                     <time dateTime='2022-04-04T10:00AM-08:00'>07:00PM</time>
                   </p>
                 </li>
               ))}
             </ol>
-          </div>
-          <div className='mt-10 relative aspect-[6/5] w-full max-w-lg rounded-2xl sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36'>
-            <Image
-              src='/images/seminars/marriage-seminars.jpg'
-              alt=''
-              className='h-full w-full object-cover object-center sm:h-full sm:w-full rounded-2xl'
-              fill
-            />
-          </div>
-
-          <div className='pt-4'>
-            <Button href='/seminars/tour'>Book now</Button>
           </div>
         </div>
       </div>

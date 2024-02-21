@@ -11,7 +11,7 @@ export default function CTASection() {
                 className='h-full w-full object-cover rounded-2xl'
                 src='/images/about-us/dlamini-couple.jpg'
                 alt=''
-                fill
+                layout='fill'
               />
             </div>
             <div className='w-full flex-auto'>
@@ -22,7 +22,7 @@ export default function CTASection() {
 
               <div className='mt-10 flex'>
                 <a
-                  href='/seminars'
+                  href='https://wa.link/bakhedlaminiconsultancy'
                   className='text-sm font-semibold leading-6 text-primary'
                 >
                   Reach out <span aria-hidden='true'>&rarr;</span>

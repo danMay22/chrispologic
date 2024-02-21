@@ -31,9 +31,8 @@ export default function PaymentInfo({ product }: PaymentInfoProps) {
               <h2 id='information-heading' className='sr-only'>
                 Product information
               </h2>
-
               <div className='flex items-center'>
-                <p className='text-lg text-foreground sm:text-xl'>
+                <p className='text-lg font-semibold text-foreground sm:text-xl'>
                   R{product.price}
                 </p>
               </div>
@@ -53,7 +52,7 @@ export default function PaymentInfo({ product }: PaymentInfoProps) {
                 src={product.imageSrc}
                 alt={product.imageAlt}
                 className='h-full w-full object-contain object-center'
-                fill
+                layout='fill'
               />
             </div>
           </div>
@@ -79,7 +78,6 @@ export default function PaymentInfo({ product }: PaymentInfoProps) {
           </div>
         </div>
       </div>
-
       <a
         className='fixed bottom-4 right-4'
         aria-label='Chat on WhatsApp'
@@ -88,8 +86,8 @@ export default function PaymentInfo({ product }: PaymentInfoProps) {
         <Image
           alt='Chat on WhatsApp'
           src='/images/download.png'
-          width={224}
-          height={80}
+          width={112}
+          height={40}
         />
       </a>
     </>

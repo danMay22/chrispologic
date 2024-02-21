@@ -74,7 +74,7 @@ export default function ContactSection() {
               src='/images/therapy-sessions/contact-us.jpg'
               alt='contact-us'
               className='h-full w-full object-cover object-center sm:h-full sm:w-full rounded-2xl'
-              fill
+              layout='fill'
             />
           </div>
         </div>

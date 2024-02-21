@@ -8,7 +8,7 @@ export default function BannerSection() {
           src='/images/about-us/banner.jpg'
           alt=''
           className='w-full object-cover object-center'
-          fill
+          layout='fill'
         />
         <div className='absolute inset-0 bg-gradient-to-t from-background' />
       </div>

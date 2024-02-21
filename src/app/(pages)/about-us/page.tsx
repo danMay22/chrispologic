@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import AboutUsDescriptionSection from './components/about-description-section';
 import BannerSection from './components/banner-section';
 import CTASection from './components/cta-section';
+import PublicSpeaker from './components/speaker';
 import TestimonySection from './components/testimony-section';
 
 export const metadata: Metadata = {
@@ -17,6 +18,8 @@ export default function Page() {
       <AboutUsDescriptionSection />
 
       <TestimonySection />
+
+      <PublicSpeaker />
 
       <CTASection />
     </>

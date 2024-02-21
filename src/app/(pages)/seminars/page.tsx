@@ -20,8 +20,8 @@ export default function Page() {
         <Image
           alt='Chat on WhatsApp'
           src='/images/download.png'
-          width={224}
-          height={80}
+          width={112}
+          height={40}
         />
       </a>
     </>

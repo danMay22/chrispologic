@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function TestimonySection() {
   return (
     <section className='isolate overflow-hidden bg-white px-6 lg:px-8 mt-10'>
@@ -27,20 +25,6 @@ export default function TestimonySection() {
               </p>
             </blockquote>
           </div>
-          <div className='col-end-1 w-16 lg:row-span-4 lg:w-72'>
-            <div className='relative h-16 sm:h-64 w-full rounded-xl lg:rounded-3xl'>
-              <Image
-                className='h-full w-full object-cover rounded-xl lg:rounded-3xl'
-                src='/images/home/hero-section.jpg'
-                alt='hero section image'
-                fill
-              />
-            </div>
-          </div>
-          <figcaption className='text-base lg:col-start-1 lg:row-start-3'>
-            <div className='font-semibold text-gray-900'>The family man</div>
-            <div className='mt-1 text-gray-500'>Bakhe Dlamini</div>
-          </figcaption>
         </figure>
       </div>
     </section>
