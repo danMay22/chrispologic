@@ -2,23 +2,31 @@ import Link from 'next/link';
 
 export const footerLinks = [
   {
-    title: 'Address: ',
-
+    title: 'About',
     links: [
-      {
-        title:
-          ' 6 Albury Road, Corner Jan Smut, Dunkeld West, Hyde Park. Albury Office Park, Unit 4, Suit no.61',
-        url: '/contact',
-      },
+      { title: 'Our Mission', url: '/about-us' },
+      { title: 'Service Times', url: '/services' },
     ],
   },
   {
-    title: ' Landline: ',
-    links: [{ title: '0115933275', url: '/contact' }],
+    title: 'Yonder Worship Center',
+    links: [
+      { title: 'Tithe & Donation', url: '/faq' },
+      { title: 'Invite a friend', url: '/services' },
+    ],
   },
   {
-    title: ' Cell: ',
-    links: [{ title: ' 0730492342', url: '/contat' }],
+    title: 'Socials',
+    links: [
+      {
+        title: 'Youtube',
+        url: 'https://www.youtube.com/channel/UCYjezpK2Gb1at4scpgEyM1A',
+      },
+      {
+        title: 'Facebook',
+        url: 'https://www.facebook.com/YonderWorshipCentreMidrand?mibextid=ZbWKwL',
+      },
+    ],
   },
 ];
 

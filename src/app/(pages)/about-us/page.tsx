@@ -1,9 +1,9 @@
+import Team from '@/components/ui/team';
 import { Metadata } from 'next';
 import AboutUsDescriptionSection from './components/about-description-section';
 import BannerSection from './components/banner-section';
-import CTASection from './components/cta-section';
-import PublicSpeaker from './components/speaker';
-import TestimonySection from './components/testimony-section';
+import ChurchServices from './components/church';
+import { default as Note } from './components/mission';
 
 export const metadata: Metadata = {
   title: 'About Page',
@@ -17,11 +17,11 @@ export default function Page() {
 
       <AboutUsDescriptionSection />
 
-      <TestimonySection />
+      <Team />
 
-      <PublicSpeaker />
+      <Note />
 
-      <CTASection />
+      <ChurchServices />
     </>
   );
 }
