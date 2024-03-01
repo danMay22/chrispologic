@@ -60,51 +60,6 @@ export default function ChurchServices() {
             </dl>
           </div>
         </div>
-        <ul
-          role='list'
-          className='py-20 mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2'
-        >
-          <li>
-            <img
-              className='aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full rounded-2xl'
-              src='/images/about-us/IMG-20231027-WA0012.jpg'
-              alt=''
-            />
-            <h3 className='text-lg font-light leading-8 text-gray-900'>
-              Our Services
-            </h3>
-            <p className='text-base leading-7 text-gray-600'>
-              Join our Sunday Service & Tuesday Prayer.
-            </p>
-          </li>
-
-          <li>
-            <img
-              className='aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full rounded-2xl'
-              src='/images/about-us/IMG-20231027-WA0058.jpg'
-              alt=''
-            />
-            <h3 className=' text-lg font-light leading-8 text-gray-900'>
-              Kids Church
-            </h3>
-            <p className='text-base leading-7 text-gray-600'>
-              Helping build the next generation /Proverbs 22:6
-            </p>
-          </li>
-          <li>
-            <img
-              className='aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full rounded-2xl'
-              src='/images/about-us/IMG-20231027-WA0004.jpg'
-              alt=''
-            />
-            <h3 className=' text-lg font-light leading-8 text-gray-900'>
-              Our many other church activities...
-            </h3>
-            <p className='text-base leading-7 text-gray-600'>
-              Join our various conferences and/or other church activities.
-            </p>
-          </li>
-        </ul>
       </div>
     </section>
   );

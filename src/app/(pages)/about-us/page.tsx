@@ -22,6 +22,16 @@ export default function Page() {
       <Note />
 
       <ChurchServices />
+      <div className='bg-white py-5 sm:py-11'>
+        <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+          <div className='mx-auto max-w-2xl flex justify-between items-right'></div>
+        </div>
+      </div>
+      <div className='bg-white py-5 sm:py-11'>
+        <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+          <div className='mx-auto max-w-2xl flex justify-between items-right'></div>
+        </div>
+      </div>
     </>
   );
 }
