@@ -35,7 +35,9 @@ export default function SiteFooter() {
     <footer className='flex flex-col text-black-100 border-t border-white-400 bg-zinc-800'>
       <div className='flex max-md:flex-col flex-wrap justify-between gap-10 sm:px-16 px-6 py-10'>
         <div className='flex flex-col justify-start items-start gap-6'>
-          <p className='font-semibold text-xl text-white'>Bakhe Dlamini</p>
+          <p className='font-light text-xl text-white'>
+            Yonder Worship Center 2023
+          </p>
         </div>
 
         <div className='flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20'>

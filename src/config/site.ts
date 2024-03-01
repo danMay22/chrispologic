@@ -11,7 +11,7 @@ export const siteConfig = {
     },
     {
       title: 'FAQ',
-      href: '/seminars',
+      href: '/faq',
     },
     {
       title: 'Gallery',
