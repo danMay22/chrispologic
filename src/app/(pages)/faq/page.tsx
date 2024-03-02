@@ -51,7 +51,7 @@ export default function FAQ() {
                 </h3>
                 <a href='https://pos.snapscan.io/qr/vwiWJWTG'>
                   <img
-                    className='aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full rounded-2xl'
+                    className='aspect-[3/2] w-full bg-gray-50 object-cover lg:relative lg:inset-0 lg:aspect-auto lg:h-full rounded-2xl'
                     src='/images/seminars/qr-code.png'
                     alt=''
                   />

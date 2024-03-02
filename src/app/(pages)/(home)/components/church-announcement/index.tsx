@@ -2,15 +2,20 @@ const events = [
   {
     id: 1,
     href: '/services',
-    src: '/Poster/sundaypost.jpg',
+    src: '/Poster/event1.jpg',
   },
   {
     id: 2,
     href: '/services',
-    src: '/Poster/CHURCH CONFERENCE.jpg',
+    src: '/Poster/sundaypost.jpg',
   },
   {
     id: 3,
+    href: '/services',
+    src: '/Poster/CHURCH CONFERENCE.jpg',
+  },
+  {
+    id: 4,
     href: '/services',
     src: '/Poster/AnnouncementKidsChurch.jpg',
   },
