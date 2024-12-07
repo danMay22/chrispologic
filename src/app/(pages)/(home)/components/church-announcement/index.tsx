@@ -1,52 +1,67 @@
-const events = [
+import { WordRotateDemo } from '@/components/demo/word-rotate';
+import Image from 'next/image';
+
+const services = [
   {
-    id: 1,
+    icon: '/Poster/event1.jpg',
+    title: 'Fresh Encounter Conference',
+    description:
+      'Acts 43-44: Everyone was filled with awe at the many wonders and signs performed by the apostles. 44 All the believers were together and had everything in common',
     href: '/services',
-    src: '/Poster/event1.jpg',
   },
   {
-    id: 2,
+    icon: '/Poster/sundaypost.jpg',
+    title: 'Sundays Services',
+    description:
+      'Psalm 95: Come, let us sing for joy to the Lord; let us shout aloud to the Rock of our salvation',
     href: '/services',
-    src: '/Poster/sundaypost.jpg',
   },
   {
-    id: 3,
+    icon: '/Poster/CHURCH CONFERENCE.jpg',
+    title: 'Tuesday Prayer & Fasting',
+    description:
+      'Isaiah 58:6-7: Fasting is about action, and it calls us to stand with the poor and against injustice.',
     href: '/services',
-    src: '/Poster/CHURCH CONFERENCE.jpg',
   },
   {
-    id: 4,
+    icon: '/Poster/AnnouncementKidsChurch.jpg',
+    title: 'Kids Sunday Service',
+    description:
+      "Luke 18:16-17: Jesus called the children to him and said, 'Let the little children come to me, and do not hinder them, for the kingdom of God belongs to such as these'",
     href: '/services',
-    src: '/Poster/AnnouncementKidsChurch.jpg',
   },
 ];
 
 export default function Announce() {
   return (
-    <div className='bg-white'>
-      <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8'>
-        <div className='sm:flex sm:items-baseline sm:justify-between'>
-          <h2 className='text-2xl font-bold tracking-tight text-gray-900'>
-            Our Events
-          </h2>
-        </div>
+    <>
+      <div className='md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto '>
+        <h1 className='md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500'>
+          <WordRotateDemo />
+        </h1>
+        <p className='md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500'>
+          All of our services are designed to help your business stand out
+        </p>
 
-        <div className='mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 lg:gap-x-8'>
-          {events.map((product) => (
-            <div key={product.id} className='group relative'>
-              <div className='h-98 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2 group-hover:opacity-75 sm:h-auto'>
-                <img
-                  src={product.src}
-                  className='h-full w-full object-cover object-center sm:object-cover'
-                />
-              </div>
-              <h3 className='mt-4 text-base font-semibold text-gray-900'>
-                <a href={product.href}></a>
-              </h3>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-10 mt-10'>
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className='flex flex-col justify-between h-full space-y-4 text-center bg-gray-100 p-4 cursor-pointer hover:scale-105 transition-transform rounded-md'
+            >
+              <Image
+                src={service.icon}
+                width={100000}
+                height={100000}
+                className='object-contain bg-gray-100 p-4 w-full h-40 rounded-md'
+                alt='image'
+              />
+              <h1 className='text-xl font-medium'>{service.title}</h1>
+              <p className='text-gray-500'>{service.description}</p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }

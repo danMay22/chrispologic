@@ -1,6 +1,5 @@
 export const GALLERY = {
   "Church Events": [
-    "/images/gallery/Church Events/bHekNj00c8FdlJlYqUXe92AFiWDQk8pbCqIfBOpdOys=_plaintext_638339696596728634.jpg",
     "/images/gallery/Church Events/IMG-20231027-WA0001.jpg",
     "/images/gallery/Church Events/IMG-20231027-WA0002.jpg",
     "/images/gallery/Church Events/IMG-20231027-WA0003.jpg",
@@ -121,8 +120,9 @@ export const GALLERY = {
     "/images/gallery/Church Events/IMG-20231027-WA0178.jpg",
     "/images/gallery/Church Events/IMG-20231027-WA0179.jpg",
     "/images/gallery/Church Events/IMG-20231027-WA0180.jpg",
-    "/images/gallery/Church Events/j-snkDR0hCvOHpm2r9ufEQlF7O00IH54TmGjc_Mv4GE=_plaintext_638339696596182763.jpg",
-    "/images/gallery/Church Events/JoinUs.jpg"
+    "/images/gallery/Church Events/JoinUs.jpg",
+    "/images/gallery/Church Events/bHekNj00c8FdlJlYqUXe92AFiWDQk8pbCqIfBOpdOys=_plaintext_638339696596728634.jpg",
+    "/images/gallery/Church Events/j-snkDR0hCvOHpm2r9ufEQlF7O00IH54TmGjc_Mv4GE=_plaintext_638339696596182763.jpg"
   ],
   "Kids Church": [
     "/images/gallery/Kids Church/IMG-20231027-WA0015.jpg",
