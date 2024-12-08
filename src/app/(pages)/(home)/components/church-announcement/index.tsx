@@ -40,7 +40,8 @@ export default function Announce() {
           <WordRotateDemo />
         </h1>
         <p className='md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500'>
-          All of our services are designed to help your business stand out
+          All of our services are designed to help your spiritual, growth and
+          yonder
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10 mt-10'>
