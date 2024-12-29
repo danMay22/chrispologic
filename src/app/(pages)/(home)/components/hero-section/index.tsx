@@ -28,7 +28,7 @@ text-xl md:text-2xl text-gray-500'
           <h1 className='text-7xl font-bold text-red-800 '>Join us</h1>
           <p className='mt-5 text-3xl font-extralight leading-8 text-gray-900'>
             In
-            <br /> We Worship
+            <br /> Worship
           </p>
         </div>
       </div>
