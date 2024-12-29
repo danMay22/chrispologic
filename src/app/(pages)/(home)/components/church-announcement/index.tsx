@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 const services = [
   {
-    icon: '/Poster/event1.jpg',
+    icon: '/images/gallery/Church Events/IMG-20231027-WA0004.jpg',
     title: 'Fresh Encounter Conference',
     description:
       'Acts 43-44: Everyone was filled with awe at the many wonders and signs performed by the apostles. 44 All the believers were together and had everything in common',
     href: '/services',
   },
   {
-    icon: '/Poster/sundaypost.jpg',
+    icon: '/images/gallery/Sundays Services/IMG_8873.jpg',
     title: 'Sundays Services',
     description:
       'Psalm 95: Come, let us sing for joy to the Lord; let us shout aloud to the Rock of our salvation',
@@ -24,7 +24,7 @@ const services = [
     href: '/services',
   },
   {
-    icon: '/Poster/AnnouncementKidsChurch.jpg',
+    icon: '/images/gallery/Kids Church/IMG-20231027-WA0017.jpg',
     title: 'Kids Sunday Service',
     description:
       "Luke 18:16-17: Jesus called the children to him and said, 'Let the little children come to me, and do not hinder them, for the kingdom of God belongs to such as these'",

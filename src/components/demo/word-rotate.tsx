@@ -4,7 +4,7 @@ export function WordRotateDemo() {
   return (
     <WordRotate
       className='text-4xl font-bold text-black dark:text-white'
-      words={['Join us on', 'Our upcoming events']}
+      words={['Our Weekly Schedule', 'Our Upcoming Events']}
     />
   );
 }

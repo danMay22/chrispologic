@@ -34,65 +34,60 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section>
-      <div className='bg-white py-3 sm:pt-32'>
-        <div className='mx-auto flex flex-col justify-between gap-25'>
-          <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-            <div className='mx-auto max-w-2xl sm:text-center'>
-              <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-                For Tithes, Offering and/or Donations
-              </h2>
-              <p className='mt-6 text-lg leading-8 text-gray-600'></p>
-            </div>
-            <div className='mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none'>
-              <div className='p-8 sm:p-10 lg:flex-auto'>
-                <h3 className='text-2xl font-bold tracking-tight text-gray-900'>
-                  Scan or Click the QR code Here
-                </h3>
-                <a href='https://pos.snapscan.io/qr/vwiWJWTG'>
-                  <img
-                    className='aspect-[3/2] w-full bg-gray-50 object-cover lg:relative lg:inset-0 lg:aspect-auto lg:h-full rounded-2xl'
-                    src='/images/seminars/qr-code.png'
-                    alt=''
-                  />
-                </a>
-              </div>
-            </div>
+    <section
+      className='
+   my-10 md:py-20  md:mx-auto
+  bg-accent rounded-[45px] p-[50px] md:p-[60px] relative'
+    >
+      <div className='md:pr-[22rem]'>
+        <div className=''>
+          <div className='mx-auto max-w-2xl sm:text-center'>
+            <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+              For Tithes, Offering and/or Donations
+            </h2>
+            <p className='mt-6 text-lg leading-8 text-gray-600'></p>
           </div>
-
-          <div className='mx-auto max-w-7xl px-6 py-24 sm:pt-32 lg:px-8 lg:py-40'>
-            <div className='lg:grid lg:grid-cols-12 lg:gap-8'>
-              <div className='lg:col-span-5'>
-                <h2 className='text-2xl font-bold leading-10 tracking-tight text-gray-900'>
-                  Frequently asked questions
-                </h2>
-                <p className='mt-4 text-base leading-7 text-gray-600'>
-                  Can’t find the answer you’re looking for? Read more about{' '}
-                  <a
-                    href='/contact'
-                    className='font-semibold text-indigo-600 hover:text-indigo-500'
-                  >
-                    Our Church
-                  </a>{' '}
-                  or Call: <strong>+27 73 841 8903</strong>
-                  <br />
-                  Email on <strong>info@yonderworshipcentre.co.za</strong>
-                </p>
-              </div>
-              <div className='mt-10 lg:col-span-7 lg:mt-0'>
-                <dl className='space-y-10'>
-                  {faqs.map((faq) => (
-                    <div key={faq.question}>
-                      <dt className='text-base font-semibold leading-7 text-gray-900'>
-                        {faq.question}
-                      </dt>
-                      <dd className='mt-2 text-base leading-7 text-gray-600'>
-                        {faq.answer}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
+          <h3 className='py-5 text-2xl font-bold tracking-tight text-gray-900'>
+            Scan or Click the QR code Here
+          </h3>
+          <a href='https://pos.snapscan.io/qr/vwiWJWTG'>
+            <img
+              className=' md:w-1/3 rounded-md'
+              src='/images/snap-scan.jpg'
+              alt=''
+            />
+          </a>
+          <div className='lg:grid lg:grid-cols-12 lg:gap-8'>
+            <div className='lg:col-span-5'>
+              <h2 className='text-2xl font-bold leading-10 tracking-tight text-gray-900'>
+                Frequently asked questions
+              </h2>
+              <p className='mt-4 text-base leading-7 text-gray-600'>
+                Can’t find the answer you’re looking for? Read more about{' '}
+                <a
+                  href='/contact'
+                  className='font-semibold text-indigo-600 hover:text-indigo-500'
+                >
+                  Our Church
+                </a>{' '}
+                or Call: <strong>+27 73 841 8903</strong>
+                <br />
+                Email on <strong>info@yonderworshipcentre.co.za</strong>
+              </p>
+            </div>
+            <div className='mt-10 lg:col-span-7 lg:mt-0'>
+              <dl className='space-y-10'>
+                {faqs.map((faq) => (
+                  <div key={faq.question}>
+                    <dt className='text-base font-semibold leading-7 text-gray-900'>
+                      {faq.question}
+                    </dt>
+                    <dd className='mt-2 text-base leading-7 text-gray-600'>
+                      {faq.answer}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </div>
