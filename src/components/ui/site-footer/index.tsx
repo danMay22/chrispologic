@@ -62,7 +62,17 @@ export default function SiteFooter() {
       </div>
 
       <div className='flex justify-between items-center flex-wrap mt-10 border-t text-gray-400 border-gray-400 sm:px-16 px-6 py-10'>
-        <p> &copy; 2023 designed by Dan Mayunga. All rights reserved.</p>
+        <p>
+          {' '}
+          &copy; 2023 designed by {'>> '}
+          <Link
+            href='https://www.instagram.com/adn0022/'
+            className='text-red-600'
+          >
+            Dan Mayunga
+          </Link>
+          . {' <<'} All rights reserved.
+        </p>
         <div className='flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10'>
           <Link href='/' className='text-gray-400'>
             Privacy Policy
