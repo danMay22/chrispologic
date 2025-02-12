@@ -163,7 +163,7 @@ export default function AboutPage() {
             <Image
               src={'/images/gallery/Church Events/IMG-20231027-WA0004.jpg'}
               alt='clock'
-              className='mb-6 max-h-36 w-full rounded-xl object-cover'
+              className='mb-6 max-h-36 w-full rounded-xl object-cover shadow-[0_35px_35px_rgba(0,0,0,0.25)]'
               width={600}
               height={600}
             />

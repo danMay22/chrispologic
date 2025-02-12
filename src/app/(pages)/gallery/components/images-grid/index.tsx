@@ -33,7 +33,7 @@ export function ImagesGrid({ photos }: ImagesGridProps) {
       <div className='pt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
         {photos.map((photo) => (
           <div key={photo} className='group relative'>
-            <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>
+            <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 '>
               <Image
                 onClick={openModal}
                 src={photo}
@@ -48,7 +48,7 @@ export function ImagesGrid({ photos }: ImagesGridProps) {
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent
-          className='sm:max-w-4xl max-w-xs px-8 sm:h-[40rem] h-96 flex'
+          className='sm:max-w-[425px] bg-[linear-gradient(#fbf7ec,#e2f1ee)] max-w-xs px-8 sm:h-[40rem] h-96 flex'
           onInteractOutside={(e) => {
             e.preventDefault();
           }}
@@ -61,7 +61,7 @@ export function ImagesGrid({ photos }: ImagesGridProps) {
                     onClick={openModal}
                     src={photo}
                     alt=''
-                    className='h-full w-full object-contain object-center lg:h-full lg:w-full'
+                    className='h-full w-full object-contain object-center lg:h-full lg:w-full aspect-square rounded-lg bg-[linear-gradient(#fbf7ec,#e2f1ee)]'
                     fill
                   />
                 </CarouselItem>

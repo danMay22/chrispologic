@@ -32,7 +32,7 @@ export default function FAQ() {
                 <Image
                   src='/images/snap-scan.jpg'
                   alt='snap-scan'
-                  className='w-full aspect-square rounded-lg object-cover bg-secondary'
+                  className='w-full aspect-square rounded-lg object-cover shadow-[0_35px_35px_rgba(0,0,0,0.25)] bg-secondary'
                   width={600}
                   height={600}
                 />

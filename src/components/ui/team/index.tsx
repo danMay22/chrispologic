@@ -51,7 +51,7 @@ export default function Team() {
             <Image
               src={member.imageUrl}
               alt={member.name}
-              className='h-20 w-20 rounded-full object-cover mx-auto bg-secondary'
+              className='h-60 w-60 rounded-e-md object-cover mx-auto bg-secondary shadow-[0_35px_35px_rgba(0,0,0,0.25)]'
               width={120}
               height={120}
             />
