@@ -28,7 +28,7 @@ export default function MemberFeature() {
               <p className='text-muted-foreground lg:text-lg'>
                 <strong className='text-2xl font-bold'>Service Time: </strong>
                 <br />
-                Our service starts at 10:00am to 12:00PM.
+                Our service starts at 10:00am - 12:00PM.
                 <br />
                 <strong className='text-2xl font-bold'>Unit 72</strong>{' '}
                 Allandale Industrial Park, 917 Morkels CI, Halfway House
