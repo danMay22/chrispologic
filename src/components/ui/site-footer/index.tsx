@@ -1,30 +1,30 @@
-import Link from 'next/link';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-export const footerLinks = [
+const sections = [
   {
     title: 'About',
     links: [
-      { title: 'Our Mission', url: '/about-us' },
-      { title: 'Service Times', url: '/services' },
+      { name: 'Our Mission', href: '/about-us' },
+      { name: 'Service Times', href: '/services' },
     ],
   },
   {
     title: 'Yonder Worship Center',
     links: [
-      { title: 'Tithe & Donation', url: '/faq' },
-      { title: 'Invite a friend', url: '/services' },
+      { name: 'Tithe & Donation', href: '/faq' },
+      { name: 'Invite a friend', href: '/' },
     ],
   },
   {
     title: 'Socials',
     links: [
       {
-        title: 'Youtube',
-        url: 'https://www.youtube.com/channel/UCYjezpK2Gb1at4scpgEyM1A',
+        name: 'Facebook',
+        href: 'https://www.facebook.com/YonderWorshipCentreMidrand?mibextid=ZbWKwL',
       },
       {
-        title: 'Facebook',
-        url: 'https://www.facebook.com/YonderWorshipCentreMidrand?mibextid=ZbWKwL',
+        name: 'Youtube',
+        href: 'https://www.youtube.com/channel/UCYjezpK2Gb1at4scpgEyM1A',
       },
     ],
   },
@@ -32,56 +32,87 @@ export const footerLinks = [
 
 export default function SiteFooter() {
   return (
-    <footer className='mt-20 flex flex-col text-black-100 border-t border-white-400 bg-zinc-800'>
-      <div className='flex max-md:flex-col flex-wrap justify-between gap-10 sm:px-16 px-6 py-10'>
-        <div className='flex flex-col justify-start items-start gap-6'>
-          <p className='font-light text-xl text-white'>
-            Yonder Worship Center 2023
-          </p>
-        </div>
-
-        <div className='flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20'>
-          {footerLinks.map((link) => (
-            <div
-              key={link.title}
-              className='flex flex-col gap-6 text-base min-w-[170px]'
-            >
-              <h3 className='font-bold text-white'>{link.title}</h3>
-              {link.links.map((item) => (
-                <Link
-                  key={item.title}
-                  href={item.url}
-                  className='text-gray-400'
-                >
-                  {item.title}
-                </Link>
+    <section className='py-32'>
+      <div className='container'>
+        <footer>
+          <div className='flex flex-col items-center justify-between gap-10 text-center lg:flex-row lg:text-left'>
+            <div className='flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start'>
+              <div>
+                <span className='flex items-center justify-center gap-4 lg:justify-start'>
+                  {/*<img
+                    src="https://shadcnblocks.com/images/block/block-1.svg"
+                    alt="logo"
+                    className="h-11"
+                  />*/}
+                  <p className='text-3xl font-semibold'>
+                    {' '}
+                    Yonder Worship Center 2023
+                  </p>
+                </span>
+                <p className='mt-6 text-sm text-muted-foreground'>
+                  A dynamic multicultural church based in Midrand, South Africa.
+                </p>
+              </div>
+              <ul className='flex items-center space-x-6 text-muted-foreground'>
+                <li className='font-medium hover:text-primary'>
+                  <a href='#'>
+                    <FaInstagram className='size-6' />
+                  </a>
+                </li>
+                <li className='font-medium hover:text-primary'>
+                  <a href='#'>
+                    <FaFacebook className='size-6' />
+                  </a>
+                </li>
+                <li className='font-medium hover:text-primary'>
+                  <a href='#'>
+                    <FaTwitter className='size-6' />
+                  </a>
+                </li>
+                <li className='font-medium hover:text-primary'>
+                  <a href='#'>
+                    <FaLinkedin className='size-6' />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className='grid grid-cols-3 gap-6 lg:gap-20'>
+              {sections.map((section, sectionIdx) => (
+                <div key={sectionIdx}>
+                  <h3 className='mb-6 font-bold'>{section.title}</h3>
+                  <ul className='space-y-4 text-sm text-muted-foreground'>
+                    {section.links.map((link, linkIdx) => (
+                      <li
+                        key={linkIdx}
+                        className='font-medium hover:text-primary'
+                      >
+                        <a href={link.href}>{link.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
-          ))}
-        </div>
+          </div>
+          <div className='mt-20 flex flex-col justify-between gap-4 border-t pt-8 text-center text-sm font-medium text-muted-foreground lg:flex-row lg:items-center lg:text-left'>
+            <p>&copy; 2023 designed by</p>
+            <ul className='flex justify-center gap-4 lg:justify-start'>
+              <li className='hover:text-primary'>
+                <a
+                  href='https://www.instagram.com/adn0022/'
+                  className='font-medium'
+                >
+                  {' '}
+                  Dan Mayunga
+                </a>
+              </li>
+              <li className='hover:text-primary'>
+                <a href='#'> Terms and Conditions & Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
       </div>
-
-      <div className='flex justify-between items-center flex-wrap mt-10 border-t text-gray-400 border-gray-400 sm:px-16 px-6 py-10'>
-        <p>
-          {' '}
-          &copy; 2023 designed by{'  '}
-          <Link
-            href='https://www.instagram.com/adn0022/'
-            className='text-lg font-bold text-white'
-          >
-            <u>Dan Mayunga</u>
-          </Link>
-          . All rights reserved.
-        </p>
-        <div className='flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10'>
-          <Link href='/' className='text-gray-400'>
-            Privacy Policy
-          </Link>
-          <Link href='/' className='text-gray-400'>
-            Terms of Use
-          </Link>
-        </div>
-      </div>
-    </footer>
+    </section>
   );
 }
