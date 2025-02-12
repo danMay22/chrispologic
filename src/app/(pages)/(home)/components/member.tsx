@@ -7,7 +7,7 @@ export default function MemberFeature() {
       <div className='container flex flex-col gap-16 lg:px-16'>
         <div className='lg:max-w-sm'>
           <h1 className='mb-3 font-semibold md:mb-4 md:text-5xl lg:mb-6'>
-            I'm new
+            I'm NEW
           </h1>
         </div>
         <div className='grid gap-6 md:grid-cols-2 lg:gap-8'>
