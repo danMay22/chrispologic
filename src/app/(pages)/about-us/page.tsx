@@ -22,12 +22,12 @@ export default function AboutPage() {
         <div className='grid gap-6 md:grid-cols-2'>
           <Image
             src={'/christ.jpeg'}
-            alt='clock'
+            alt='cross'
             className='w-full aspect-square rounded-lg object-cover bg-secondary'
             width={600}
             height={600}
           />
-          <div className='flex flex-col justify-between gap-10 rounded-2xl bg-muted p-10'>
+          <div className='flex flex-col justify-between gap-10 rounded-2xl bg-muted p-10 bg-[linear-gradient(#fbf7ec,#e2f1ee)]'>
             <p className='text-2xl text-muted-foreground'>OUR MISSION</p>
             <p className='text-lg font-medium'>
               At Yonder, we are more than just a church - we are a vibrant
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </div>
         </div>
         <Team />
-        <div className='flex flex-col gap-6 md:gap-20'>
+        <div className='flex flex-col gap-6 md:gap-20 '>
           <div className='max-w-xl'>
             <h2 className='mb-2.5 text-3xl font-semibold md:text-5xl'>
               We at Yonder are committed to:

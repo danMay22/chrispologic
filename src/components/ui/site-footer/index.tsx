@@ -67,7 +67,7 @@ export default function SiteFooter() {
           &copy; 2023 designed by{'  '}
           <Link
             href='https://www.instagram.com/adn0022/'
-            className='text-2xl font-bold text-white'
+            className='text-lg font-bold text-white'
           >
             <u>Dan Mayunga</u>
           </Link>

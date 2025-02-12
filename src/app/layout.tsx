@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@/components/providers/theme';
 import SiteFooter from '@/components/ui/site-footer';
 import { SiteHeader } from '@/components/ui/site-header';
 import { siteConfig } from '@/config/site';
@@ -37,19 +36,11 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          forcedTheme='light'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className='relative flex min-h-screen flex-col'>
-            <SiteHeader />
-            <div className='flex-1'>{children}</div>
-            <SiteFooter />
-          </div>
-        </ThemeProvider>
+        <div className='relative flex min-h-screen flex-col'>
+          <SiteHeader />
+          <div className='flex-1'>{children}</div>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );
