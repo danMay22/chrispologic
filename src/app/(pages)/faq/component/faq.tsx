@@ -19,8 +19,8 @@ interface Faq3Props {
 const faqItems = [
   {
     id: 1,
-    title: 'Should one attend church? ',
-    details:
+    question: 'Should one attend church? ',
+    answer:
       "Most definitely. In the Bible there is a correlation between one's spiritual commitment to God and church fellowship. The Bible says we should 'not' neglect the gathering of saints like some have (Hebrews 10:25). This means that some during the early church had the unfortunate tendency of skipping or abandoning church fellowship. One cannot say, 'I abandoned church, but not God'. The church was put by God as a system of accountability for the believer and other believers (Galatians 6:1; 1 Corinthians 16:2; 1 Corinthians 12:13). The Bible describes the coming together of believers like oil flowing down Aaron the priest's beard to the bottom of his robe (Psalms 133:1-3). The gathering of believers is like log put together in a fire. A single log cannot burn alone. The strategy of Satan is to always remove them from a local church or gathering in order to put out their spiritual fire.",
   },
   {
@@ -50,29 +50,6 @@ const faqItems = [
   },
 ];
 
-const faqs = [
-  {
-    question: 'What is a FAQ and why is it important?',
-    answer:
-      'FAQ stands for Frequently Asked Questions. It is a list that provides answers to common questions people may have about a specific product, service, or topic.',
-  },
-  {
-    question: 'Why should I use a FAQ on my website or app?',
-    answer:
-      'Utilizing a FAQ section on your website or app is a practical way to offer instant assistance to your users or customers. Instead of waiting for customer support responses, they can find quick answers to commonly asked questions. ',
-  },
-  {
-    question: 'How do I effectively create a FAQ section?',
-    answer:
-      'Creating a FAQ section starts with gathering the most frequent questions you receive from your users or customers. Once you have a list, you need to write clear, detailed, and helpful answers to each question.',
-  },
-  {
-    question: 'What are the benefits of having a well-maintained FAQ section?',
-    answer:
-      'There are numerous advantages to maintaining a robust FAQ section. Firstly, it provides immediate answers to common queries, which improves the user experience.',
-  },
-];
-
 export default function FAQ01() {
   return (
     <section className='py-32'>
@@ -89,7 +66,7 @@ export default function FAQ01() {
           </p>
         </div>
         <div className='mx-auto mt-14 max-w-screen-sm'>
-          {faqs.map((faq, index) => (
+          {faqItems.map((faq, index) => (
             <div key={index} className='mb-8 flex gap-4'>
               <span className='flex size-6 shrink-0 items-center justify-center rounded-sm bg-secondary font-mono text-xs text-primary'>
                 {index + 1}
