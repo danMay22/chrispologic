@@ -16,15 +16,12 @@ export default function HeroSection() {
           excellence. Yonder is a fast-growing church with a massive vision.{' '}
         </p>
         <div className='flex items-center gap-2.5 text-lg max-lg:flex-col max-lg:text-base'>
-          <Button
-            className='w-fit rounded-md border px-8 py-1'
-            href='/about-us'
-          >
+          <Button className='w-fit rounded-md  px-8 py-1' href='/about-us'>
             Meet Us
           </Button>
           <Button
             variant='secondary'
-            className='w-fit rounded-md border px-8 py-1'
+            className='w-fit rounded-md  px-8 py-1'
             href='https://www.youtube.com/@YonderWorshipCentre'
           >
             Watch Youtube sermon
