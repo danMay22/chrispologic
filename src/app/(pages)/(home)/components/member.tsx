@@ -1,3 +1,4 @@
+import { TypingAnimationDemo } from '@/components/demo/typing-animation';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
@@ -7,7 +8,7 @@ export default function MemberFeature() {
       <div className='container flex flex-col gap-16 lg:px-16'>
         <div className='lg:max-w-sm'>
           <h1 className='mb-3 font-semibold md:mb-4 md:text-5xl lg:mb-6'>
-            I'm NEW
+            <TypingAnimationDemo />
           </h1>
         </div>
         <div className='grid gap-6 md:grid-cols-2 lg:gap-8'>
