@@ -64,14 +64,14 @@ export default function SiteFooter() {
       <div className='flex justify-between items-center flex-wrap mt-10 border-t text-gray-400 border-gray-400 sm:px-16 px-6 py-10'>
         <p>
           {' '}
-          &copy; 2023 designed by {'>> '}
+          &copy; 2023 designed by{'  '}
           <Link
             href='https://www.instagram.com/adn0022/'
-            className='text-red-600'
+            className='text-2xl font-bold text-white'
           >
-            Dan Mayunga
+            <u>Dan Mayunga</u>
           </Link>
-          . {' <<'} All rights reserved.
+          . All rights reserved.
         </p>
         <div className='flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10'>
           <Link href='/' className='text-gray-400'>

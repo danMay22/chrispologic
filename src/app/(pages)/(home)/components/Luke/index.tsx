@@ -1,72 +1,101 @@
-import { ChurchIcon, Mail, PhoneIcon } from 'lucide-react';
+import { List, Play, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
-function JoinUs() {
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '@/components/ui/card';
+
+export default function JoinUs() {
   return (
-    <section
-      className='
-     my-10 md:py-20  md:mx-auto
-    bg-accent rounded-[45px] p-[50px] md:p-[60px] relative'
-    >
-      <div className='md:pr-[22rem]'>
-        <p className='mt-5 text-lg leading-8 text-gray-900'>
-          Now it came to pass on a certain day that he went into a ship with his
-          disciples:
-          <br />
-          and he said unto them, Let us go over to the other side of the lake.
-          And they launched forth.
-        </p>
-        <dl className='mt-5 space-y-4 text-base leading-7 text-gray-900'>
-          <div className='flex gap-x-4'>
-            <dt className='flex-none'>
-              <span className='sr-only'>Address </span>
-              <ChurchIcon
-                className='h-7 w-6 text-gray-900'
-                aria-hidden='true'
-              />
-            </dt>
-            <dd>
-              917 Morkels CI, Halfway House,<br></br>
-              Midrand, Unit 72, South Africa
-            </dd>
+    <section className='py-32'>
+      <div className='container'>
+        <div className='mx-auto flex max-w-5xl flex-col items-center gap-6 text-center'>
+          <h1 className='mb-6 text-pretty text-4xl font-semibold lg:text-5xl'>
+            Get Involved
+          </h1>
+          <p className='text-xl font-semibold'>
+            Grow closer to God through joyful services, as we build His kingdom
+            together one action at a time.
+          </p>
+          <div className='mt-10 grid grid-cols-1 place-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+            <Card>
+              <CardHeader className='pb-1'>
+                <Sparkles className='size-4' strokeWidth={1} />
+              </CardHeader>
+              <CardContent className='text-left'>
+                <h2 className='mb-1 text-lg font-semibold'>Stewardship</h2>
+                <p className='leading-snug text-muted-foreground'>
+                  Your generous gifts, time and efforts help us serve our
+                  community and spread God's love - every contribution, no
+                  matter the size, makes a meaningful difference in our shared
+                  ministry.
+                </p>
+              </CardContent>
+              <CardFooter className='justify-end pb-0 pr-0'>
+                <Image
+                  src={'/logo/stew.jpg'}
+                  alt='clock'
+                  className='h-40 w-full rounded-tl-md object-cover object-center'
+                  width={600}
+                  height={600}
+                />
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader className='pb-1'>
+                <List className='size-4' strokeWidth={1} />
+              </CardHeader>
+              <CardContent className='text-left'>
+                <h2 className='mb-1 text-lg font-semibold'>Volunteer</h2>
+                <p className='leading-snug text-muted-foreground'>
+                  Make a lasting difference in your community while nurturing
+                  your spirit <br />
+                  Join our team of church volunteers thatTransform lives and
+                  find purpose by sharing your unique gifts as a church
+                  volunteer - even a few hours makes an eternal impact.
+                </p>
+              </CardContent>
+              <CardFooter className='justify-end pb-0 pr-0'>
+                <Image
+                  src={'/logo/know.jpeg'}
+                  alt='clock'
+                  className='h-40 w-full rounded-tl-md object-cover object-center'
+                  width={600}
+                  height={600}
+                />
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader className='pb-1'>
+                <Play className='size-4' strokeWidth={1} />
+              </CardHeader>
+              <CardContent className='text-left'>
+                <h2 className='mb-1 text-lg font-semibold'>
+                  Become an active member
+                </h2>
+                <p className='leading-snug text-muted-foreground'>
+                  Get to know your community and discover a welcoming community
+                  where you can grow spiritually, make lifelong friendships, and
+                  make a positive impact in your neighborhood through our
+                  church's diverse programs and volunteer opportunities.
+                </p>
+              </CardContent>
+              <CardFooter className='justify-end pb-0 pr-0'>
+                <Image
+                  src={'/logo/involve.jpg'}
+                  alt='clock'
+                  className='h-40 w-full rounded-tl-md object-cover object-center'
+                  width={600}
+                  height={600}
+                />
+              </CardFooter>
+            </Card>
           </div>
-          <div className='flex gap-x-4'>
-            <dt className='flex-none'>
-              <span className='sr-only'>Telephone</span>
-              <PhoneIcon className='h-7 w-6 text-gray-900' aria-hidden='true' />
-            </dt>
-            <dd>
-              <a className='hover:text-white' href='tel:+27 73 841 8903'>
-                +27 73 841 8903
-              </a>
-            </dd>
-          </div>
-          <div className='flex gap-x-4'>
-            <dt className='flex-none'>
-              <span className='sr-only'>Email</span>
-              <Mail className='h-7 w-6 text-gray-900' aria-hidden='true' />
-            </dt>
-            <dd>
-              <a
-                className='hover:text-white'
-                href='mailto:info@yonderworshipcentre.co.za'
-              >
-                info@yonderworshipcentre.co.za
-              </a>
-            </dd>
-          </div>
-        </dl>
-      </div>
-      <div className='absolute -top-8 right-8 hidden md:block'>
-        <Image
-          src='/images/proposal_illustration.png'
-          alt='proposal illustration'
-          width={300}
-          height={300}
-        />
+        </div>
       </div>
     </section>
   );
 }
-
-export default JoinUs;
