@@ -32,8 +32,8 @@ const sections = [
 
 export default function SiteFooter() {
   return (
-    <section className='py-32'>
-      <div className='container'>
+    <section className='bg-[linear-gradient(#fbf7ec,#e2f1ee)] py-20 text-center'>
+      <div className='container flex flex-col items-center gap-5'>
         <footer>
           <div className='flex flex-col items-center justify-between gap-10 text-center lg:flex-row lg:text-left'>
             <div className='flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start'>
@@ -46,7 +46,7 @@ export default function SiteFooter() {
                   />*/}
                   <p className='text-3xl font-semibold'>
                     {' '}
-                    Yonder Worship Center 2023
+                    Yonder Worship Center
                   </p>
                 </span>
                 <p className='mt-6 text-sm text-muted-foreground'>
