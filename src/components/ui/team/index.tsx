@@ -10,7 +10,7 @@ const people = [
   {
     name: 'Nokwanda Dlamini',
     imageUrl: '/IMG.30.42_9ad4bbc8.png',
-    title: 'Pastor of Yonder Worship Centre.',
+    title: 'Pastor of Yonder Worship Centre',
     bio: '',
   },
 ];
