@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className='bg-[linear-gradient(#fbf7ec,#e2f1ee)] py-20 text-center'>
+    <section className='bg-[linear-gradient(#fbf7ec,#e2f1ee)] shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] py-20 text-center'>
       <div className='container flex flex-col items-center gap-5'>
         <h1 className='max-w-2xl text-7xl font-medium text-foreground max-lg:text-5xl'>
           Welcome to Yonder Worship Centre
@@ -29,9 +29,9 @@ export default function HeroSection() {
         </div>
         <Image
           src={'/images/home/Bakhe & Wife 2.png'}
-          width={10000}
-          height={10000}
-          className='object-contain mx-auto'
+          width={600}
+          height={600}
+          className='mt-10 w-[50%] rounded-xl shadow-[0_35px_35px_rgba(0,0,0,0.25)] max-lg:w-full'
           alt='image'
         />
       </div>
