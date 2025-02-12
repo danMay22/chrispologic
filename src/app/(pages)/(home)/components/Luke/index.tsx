@@ -53,7 +53,7 @@ export default function JoinUs() {
                 <p className='leading-snug text-muted-foreground'>
                   Make a lasting difference in your community while nurturing
                   your spirit <br />
-                  Join our team of church volunteers that Transform lives and
+                  Join our team of church volunteers that transform lives and
                   find purpose by sharing your unique gifts as a church
                   volunteer - even a few hours makes an eternal impact.
                 </p>
