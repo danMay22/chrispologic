@@ -22,7 +22,6 @@ export function SiteHeader() {
           <Link href='/' className='flex items-center space-x-2'>
             <span className='inline-block font-bold'>{siteConfig.name}</span>
           </Link>
-
           <nav className='lg:flex gap-6 hidden'>
             {siteConfig.mainNav.map((nav) => (
               <Link
@@ -45,7 +44,6 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
-
           <div className='lg:hidden'>
             <Popover>
               <PopoverTrigger asChild>

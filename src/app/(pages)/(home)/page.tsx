@@ -13,10 +13,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1 className='text-5xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center'>
+      <div className='bg-[rgb(48,33,15)]'>
         <CoverDemo />
-      </h1>
-      <div className='bg-white py-5 sm:py-11' />
+      </div>
       <HeroSection />
       <Announce />
       <MemberFeature />
