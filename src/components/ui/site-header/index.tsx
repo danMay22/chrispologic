@@ -8,6 +8,7 @@ import {
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { MenuIcon } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '../button';
@@ -20,7 +21,7 @@ export function SiteHeader() {
       <div className='container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0'>
         <div className='flex gap-6 md:gap-10 justify-between w-full'>
           <Link href='/' className='flex items-center space-x-2'>
-            <span className='inline-block font-bold'>{siteConfig.name}</span>
+            <Image src='/logo/logo.jpg' alt='logo' width={50} height={50} />
           </Link>
           <nav className='lg:flex gap-6 hidden'>
             {siteConfig.mainNav.map((nav) => (
