@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <div className='bg-[rgb(48,33,15)]'>
+      <div className='bg-[linear-gradient(#fbf7ec,#e2f1ee)]'>
         <CoverDemo />
       </div>
       <HeroSection />
