@@ -35,7 +35,7 @@ const services = [
 export default function Announce() {
   return (
     <div className='min-h-screen flex items-center justify-center'>
-      <div className='max-w-screen-xl mx-auto py-4 text-center'>
+      <div className='max-w-screen-xl mx-auto text-center'>
         <h1 className='text-4xl md:text-5xl font-black tracking-tight text-center'>
           <WordRotateDemo />
         </h1>

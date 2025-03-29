@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function MemberFeature() {
   return (
-    <section className='py-10'>
+    <section className='py-4'>
       <div className='container flex flex-col gap-16 lg:px-16'>
         <div className='lg:max-w-sm'>
           <h1 className='mb-3 font-semibold md:mb-4 md:text-5xl lg:mb-6'>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <div className='bg-[linear-gradient(#fbf7ec,#e2f1ee)]'>
+      <div className='bg-[url(/banner.webp)]'>
         <CoverDemo />
       </div>
       <HeroSection />
