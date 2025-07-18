@@ -58,7 +58,7 @@ export default function MemberFeature() {
             </div>
             <div className='md:min-h-[24rem] lg:min-h-[28rem] xl:min-h-[32rem]'>
               <Image
-                src={'/logo/church.jpg'}
+                src={'/pexels-jibarofoto-2351722.jpg'}
                 alt='church'
                 className='w-full aspect-square rounded-lg object-cover bg-secondary'
                 width={600}

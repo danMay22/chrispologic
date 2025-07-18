@@ -3,28 +3,28 @@ import Image from 'next/image';
 
 const services = [
   {
-    icon: '/images/gallery/Church Events/IMG-20231027-WA0004.jpg',
+    icon: '/pexels-rquiros-2330141.jpg',
     title: 'Fresh Encounter Conference',
     description:
       'Acts 43-44: Everyone was filled with awe at the many wonders and signs performed by the apostles. 44 All the believers were together and had everything in common',
     href: '/services',
   },
   {
-    icon: '/images/gallery/Sundays Services/IMG_8873.jpg',
+    icon: '/pexels-yungsaac-2305084.jpg',
     title: 'Sundays Services',
     description:
       'Psalm 95: Come, let us sing for joy to the Lord; let us shout aloud to the Rock of our salvation',
     href: '/services',
   },
   {
-    icon: '/images/gallery/Kids Church/IMG-20231027-WA0017.jpg',
+    icon: '/pexels-jibarofoto-2014774.jpg',
     title: 'Kids Sunday Service',
     description:
       "Luke 18:16-17: Jesus called the children to him and said, 'Let the little children come to me, and do not hinder them, for the kingdom of God belongs to such as these'",
     href: '/services',
   },
   {
-    icon: '/Poster/CHURCH CONFERENCE.jpg',
+    icon: '/pexels-pixabay-372326.jpg',
     title: 'Tuesday Prayer & Fasting',
     description:
       'Isaiah 58:6-7: Fasting is about action, and it calls us to stand with the poor and against injustice.',

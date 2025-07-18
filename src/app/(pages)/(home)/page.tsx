@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <div className='bg-[url(/banner.webp)]'>
+      <div className='bg-[url(/pexels-brett-sayles-3633711.jpg)]'>
         <CoverDemo />
       </div>
       <HeroSection />
