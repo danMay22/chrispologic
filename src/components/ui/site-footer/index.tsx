@@ -9,7 +9,7 @@ const sections = [
     ],
   },
   {
-    title: 'Yonder Worship Center',
+    title: 'Reality Church Worship',
     links: [
       { name: 'Tithe & Donation', href: '/faq' },
       { name: 'Invite a friend', href: '/' },
@@ -20,11 +20,11 @@ const sections = [
     links: [
       {
         name: 'Facebook',
-        href: 'https://www.facebook.com/YonderWorshipCentreMidrand?mibextid=ZbWKwL',
+        href: 'https://www.facebook.com',
       },
       {
         name: 'Youtube',
-        href: 'https://www.youtube.com/channel/UCYjezpK2Gb1at4scpgEyM1A',
+        href: 'https://www.youtube.com',
       },
     ],
   },
@@ -46,7 +46,7 @@ export default function SiteFooter() {
                   />*/}
                   <p className='text-3xl font-semibold'>
                     {' '}
-                    Yonder Worship Center
+                    Reality Church Worship
                   </p>
                 </span>
                 <p className='mt-6 text-sm text-muted-foreground'>

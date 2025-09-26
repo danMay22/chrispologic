@@ -12,7 +12,7 @@ export default function HeroSection() {
           We are a family of people that loves God, a dynamic multicultural
           church based in ..., South Africa. While deeply spiritual, we still
           offer a generous fun place to be. Our services are a combination of
-          powerful preaching and world-class music ministry. Yonder is a church
+          powerful preaching and world-class music ministry. Reality Church Worship is a church
           of excellence. A church with a massive vision.{' '}
         </p>
         <div className='flex items-center gap-2.5 text-lg max-lg:flex-col max-lg:text-base'>

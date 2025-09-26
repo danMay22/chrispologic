@@ -1,7 +1,10 @@
 {
-  "name": "bakhe-dlamini",
+  "name": "reality-church-worship",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "dev": "node ./scripts/index.js && next dev",
     "build": "node ./scripts/index.js && next build",
@@ -31,7 +34,7 @@
     "framer-motion": "^11.13.1",
     "heroicons": "^2.1.1",
     "lucide-react": "^0.468.0",
-    "next": "^14.1.0",
+    "next": "^14.2.33",
     "next-themes": "^0.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -45,7 +48,7 @@
     "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.17.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/voucher-code-generator": "^1.1.3",

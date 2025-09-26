@@ -10,17 +10,17 @@ import {
 
 export default function JoinUs() {
   return (
-    <section className='py-32'>
+    <section className='py-16 sm:py-24 lg:py-32 px-4 sm:px-6'>
       <div className='container'>
-        <div className='mx-auto flex max-w-5xl flex-col items-center gap-6 text-center'>
-          <h1 className='mb-6 text-pretty text-4xl font-semibold lg:text-5xl'>
+        <div className='mx-auto flex max-w-5xl flex-col items-center gap-4 sm:gap-6 text-center'>
+          <h1 className='mb-4 sm:mb-6 text-pretty text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>
             Get Involved
           </h1>
-          <p className='text-xl font-semibold'>
+          <p className='text-base sm:text-lg md:text-xl font-semibold px-4'>
             Grow closer to God through joyful services, as we build His kingdom
             together one action at a time.
           </p>
-          <div className='mt-10 grid grid-cols-1 place-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+          <div className='mt-6 sm:mt-8 lg:mt-10 grid grid-cols-1 place-items-center gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full'>
             <Card>
               <CardHeader className='pb-1'>
                 <Sparkles className='size-4' strokeWidth={1} />

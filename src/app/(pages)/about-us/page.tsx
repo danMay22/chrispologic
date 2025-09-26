@@ -21,7 +21,7 @@ export default function AboutPage() {
         </div>
         <div className='grid gap-6 md:grid-cols-2'>
           <Image
-            src={'/christ.jpeg'}
+            src={'/pexels-dibert-635699.jpeg'}
             alt='cross'
             className='w-full aspect-square rounded-lg object-cover bg-secondary'
             width={600}
@@ -30,7 +30,7 @@ export default function AboutPage() {
           <div className='flex flex-col justify-between gap-10 rounded-2xl bg-muted p-10 bg-[linear-gradient(#fbf7ec,#e2f1ee)]'>
             <p className='text-2xl text-muted-foreground'>OUR MISSION</p>
             <p className='text-lg font-medium'>
-              At Yonder, we are more than just a church - we are a vibrant
+              At Reality, we are more than just a church - we are a vibrant
               family united in our love for God. Nestled in the heart of
               Midrand, South Africa, we celebrate our diversity through our
               multicultural congregation that brings together people from all
@@ -56,7 +56,7 @@ export default function AboutPage() {
         <div className='flex flex-col gap-6 md:gap-20 '>
           <div className='max-w-xl'>
             <h2 className='mb-2.5 text-3xl font-semibold md:text-5xl'>
-              We at Yonder are committed to:
+              We at Reality Church, we are committed to:
             </h2>
             <p className='text-muted-foreground'>
               A focus on spiritual growth and discipleship throughout all of our

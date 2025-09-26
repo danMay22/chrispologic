@@ -5,7 +5,7 @@ export default function BannerSection() {
     <section className='bg-background'>
       <div aria-hidden='true' className='relative h-96'>
         <Image
-          src='/images/about-us/IMG_8873.jpg'
+          src='/pexels-brett-sayles-3633711.jpg'
           alt=''
           className='w-full object-cover object-center'
           layout='fill'

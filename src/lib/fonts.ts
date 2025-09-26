@@ -1,6 +1,6 @@
-import { Nunito_Sans as NunitoSans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-export const fontSans = NunitoSans({
+export const fontSans = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
 });

@@ -2,15 +2,15 @@ import Image from 'next/image';
 
 const people = [
   {
-    name: 'Bakhe Dlamini',
-    imageUrl: '/therapy_photo.jpg',
-    title: 'Senior Founding Pastor of Yonder Worship Centre.',
+    name: 'Goerge Example',
+    imageUrl: '/pexels-cottonbro-6276705.jpg',
+    title: 'Senior Founding Pastor',
     bio: '',
   },
   {
-    name: 'Nokwanda Dlamini',
-    imageUrl: '/IMG.30.42_9ad4bbc8.png',
-    title: 'Pastor of Yonder Worship Centre',
+    name: 'Wanda Example',
+    imageUrl: '/pexels-pavel-danilyuk-8817483.jpg',
+    title: 'Pastor',
     bio: '',
   },
 ];
@@ -22,26 +22,26 @@ export default function Team() {
       </h2>
       <div className='mt-20 w-full grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-screen-lg mx-auto'>
         <p className='mt-4 text-base sm:text-lg'>
-          <strong>Bakhe: </strong> He is a world-class speaker, leader,
+          <strong>George: </strong> He is a world-class speaker, leader,
           Community Psychologist, and Author. He is a much-sought-after speaker
           and marriage therapist. <br />
-          He is well known throughout South Africa and beyond its borders with
-          regards to his work on families and love relationships. Bakhe is part
+          He is well known throughout Australia and beyond its borders with
+          regards to his work on families and love relationships. He is part
           of Married at First Sight and XO (couples) Goals, which are two TV
-          shows that broadcast on Mzansi Magic and DSTV. Bakhe runs a successful
-          private practice in Sandton. He holds a degree in theology from Global
+          shows that broadcast on DSTV. He also runs a successful
+          private practice in london. He holds a degree in theology from Global
           University, Missouri, USA, and a Masters degree in community
-          psychology from MAGU, Malawi.
+          psychology from MAU (where he met he's wife).
         </p>
 
         <p className='mt-4 text-base sm:text-lg'>
-          <strong>Nokwanda: </strong> is a world-class leader and speaker.
-          Alongside her husband, Bakhe, she runs their private practice in
+          <strong>Wanda: </strong> is a world-class leader and speaker.
+          Alongside her husband, she runs their private practice in
           Sandton. She is a Community Psychologist, marriage and family
           Therapist. She holds a degree in social works from the University of
-          KwaZulu-Natal and a Masters degree in Community Psychology from MAGU,
-          Malawi. Nokwanda is part of the panel of experts cast for Married at
-          First Sight SA, a popular TV show that broadcasts on Mzansi Magic and
+          Australia and a Masters degree in Community Psychology from MAU,
+          she is also is part of the panel of experts cast for Married at
+          First Sight, a popular TV show that broadcasts on
           DSTV.
         </p>
       </div>
