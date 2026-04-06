@@ -11,9 +11,9 @@ export function AnnouncementBanner() {
   return (
     <div className='relative bg-primary text-primary-foreground py-2 px-4 text-center text-sm font-medium'>
       <span>
-        🙌 Join us this Sunday at 9:00 AM &amp; 11:00 AM — Reality Church Worship, Midrand.{' '}
-        <a href='/services' className='underline underline-offset-2 hover:opacity-80 font-semibold'>
-          View service times →
+        🛍️ New arrivals just dropped — shop the latest Chrispology collection.{' '}
+        <a href='/gallery' className='underline underline-offset-2 hover:opacity-80 font-semibold'>
+          Shop now →
         </a>
       </span>
       <button

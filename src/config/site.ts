@@ -1,11 +1,10 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Reality Church Worship',
-  logo: '/images/home/church-logo.jpg',
-  description: '---',
+  name: 'Chrispology',
+  description: 'Faith-inspired streetwear crafted for those who carry their identity boldly.',
   mainNav: [
-    { title: 'About Us', href: '/about-us' },
-    { title: 'FAQ', href: '/faq' },
+    { title: 'Our Story', href: '/contact' },
+    { title: 'Details', href: '/details' },
   ],
 };
