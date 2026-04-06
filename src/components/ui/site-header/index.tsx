@@ -1,10 +1,8 @@
 'use client';
 
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
+import { LanguageToggle } from '@/components/ui/language-toggle';
+import { ModeToggle } from '@/components/ui/mode-toggle';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { MenuIcon } from 'lucide-react';
@@ -18,8 +16,8 @@ export function SiteHeader() {
 
   return (
     <header className='bg-background sticky top-0 z-40 w-full border-b'>
-      <div className='container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0'>
-        <div className='flex gap-6 md:gap-10 justify-between w-full'>
+      <div className='container flex h-16 items-center sm:justify-between sm:space-x-0'>
+        <div className='flex gap-6 md:gap-10 justify-between w-full items-center'>
           <Link href='/' className='flex items-center space-x-2'>
             <Image src='/logo/logo.jpg' alt='logo' width={50} height={50} />
           </Link>
@@ -30,13 +28,7 @@ export function SiteHeader() {
                 href={nav.href}
                 className={cn(
                   'text-sm font-medium transition-colors hover:text-primary',
-                  (
-                    nav.href
-                      ? nav.href === '/'
-                        ? pathname === nav.href
-                        : pathname.includes(nav.href || '')
-                      : false
-                  )
+                  (nav.href === '/' ? pathname === nav.href : pathname.includes(nav.href || ''))
                     ? 'text-muted-foreground'
                     : '',
                 )}
@@ -45,36 +37,29 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
-          <div className='lg:hidden'>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button variant='ghost' size='icon'>
-                  <MenuIcon className='h-6 w-6' />
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className='w-screen rounded-t-none space-y-2'>
-                {siteConfig.mainNav.map((nav) => (
-                  <Link
-                    key={nav.href}
-                    href={nav.href}
-                    className={cn(
-                      'text-sm font-medium transition-colors hover:text-primary w-full block py-2',
-                      (
-                        nav.href
-                          ? nav.href === '/'
-                            ? pathname === nav.href
-                            : pathname.includes(nav.href || '')
-                          : false
-                      )
-                        ? 'text-muted-foreground'
-                        : '',
-                    )}
-                  >
-                    {nav.title}
-                  </Link>
-                ))}
-              </PopoverContent>
-            </Popover>
+          <div className='flex items-center gap-1 border-l pl-3'>
+            <LanguageToggle />
+            <ModeToggle />
+            <div className='lg:hidden ml-1'>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant='ghost' size='icon'>
+                    <MenuIcon className='h-6 w-6' />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className='w-screen rounded-t-none space-y-2'>
+                  {siteConfig.mainNav.map((nav) => (
+                    <Link
+                      key={nav.href}
+                      href={nav.href}
+                      className='text-sm font-medium transition-colors hover:text-primary w-full block py-2'
+                    >
+                      {nav.title}
+                    </Link>
+                  ))}
+                </PopoverContent>
+              </Popover>
+            </div>
           </div>
         </div>
       </div>

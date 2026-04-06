@@ -5,17 +5,7 @@ export const siteConfig = {
   logo: '/images/home/church-logo.jpg',
   description: '---',
   mainNav: [
-    {
-      title: 'About Us',
-      href: '/about-us',
-    },
-    {
-      title: 'FAQ',
-      href: '/faq',
-    },
-    {
-      title: 'Gallery',
-      href: '/gallery',
-    },
+    { title: 'About Us', href: '/about-us' },
+    { title: 'FAQ', href: '/faq' },
   ],
 };

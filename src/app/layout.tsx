@@ -1,4 +1,6 @@
 import { ThemeProvider } from '@/components/providers/theme';
+import { LanguageProvider } from '@/components/providers/language';
+import { AnnouncementBanner } from '@/components/ui/announcement-banner';
 import SiteFooter from '@/components/ui/site-footer';
 import { SiteHeader } from '@/components/ui/site-header';
 import { siteConfig } from '@/config/site';
@@ -30,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
@@ -40,15 +42,17 @@ export default function RootLayout({
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
-          forcedTheme='light'
           enableSystem
           disableTransitionOnChange
         >
-          <div className='relative flex min-h-screen flex-col'>
-            <SiteHeader />
-            <div className='flex-1'>{children}</div>
-            <SiteFooter />
-          </div>
+          <LanguageProvider>
+            <div className='relative flex min-h-screen flex-col'>
+              <SiteHeader />
+              <AnnouncementBanner />
+              <div className='flex-1'>{children}</div>
+              <SiteFooter />
+            </div>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
