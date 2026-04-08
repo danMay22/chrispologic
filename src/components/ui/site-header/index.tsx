@@ -1,7 +1,9 @@
 'use client';
 
+import { LanguageToggle } from '@/components/ui/language-toggle';
 import { ModeToggle } from '@/components/ui/mode-toggle';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { useLanguage } from '@/components/providers/language';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { MenuIcon } from 'lucide-react';
@@ -11,6 +13,12 @@ import { Button } from '../button';
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const { t } = useLanguage();
+
+  const navItems = [
+    { title: t('nav.ourStory'), href: '/contact' },
+    { title: t('nav.details'), href: '/details' },
+  ];
 
   return (
     <header className='bg-background sticky top-0 z-40 w-full border-b'>
@@ -22,7 +30,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className='lg:flex gap-6 hidden absolute left-1/2 -translate-x-1/2'>
-          {siteConfig.mainNav.map((nav) => (
+          {navItems.map((nav) => (
             <Link
               key={nav.href}
               href={nav.href}
@@ -36,7 +44,8 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className='flex items-center gap-1 border-l pl-3'>
+        <div className='flex items-center gap-2 border-l pl-3'>
+          <LanguageToggle />
           <ModeToggle />
           <div className='lg:hidden ml-1'>
             <Popover>
@@ -46,7 +55,7 @@ export function SiteHeader() {
                 </Button>
               </PopoverTrigger>
               <PopoverContent className='w-screen rounded-t-none space-y-2'>
-                {siteConfig.mainNav.map((nav) => (
+                {navItems.map((nav) => (
                   <Link
                     key={nav.href}
                     href={nav.href}

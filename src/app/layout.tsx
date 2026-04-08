@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@/components/providers/theme';
+import { LanguageProvider } from '@/components/providers/language';
 import { AnnouncementBanner } from '@/components/ui/announcement-banner';
 import SiteFooter from '@/components/ui/site-footer';
 import { SiteHeader } from '@/components/ui/site-header';
@@ -9,10 +10,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s — ${siteConfig.name}`,
-  },
+  title: { default: siteConfig.name, template: `%s — ${siteConfig.name}` },
   description: siteConfig.description,
 };
 
@@ -21,12 +19,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en' suppressHydrationWarning>
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
-          <div className='relative flex min-h-screen flex-col'>
-            <SiteHeader />
-            <AnnouncementBanner />
-            <div className='flex-1'>{children}</div>
-            <SiteFooter />
-          </div>
+          <LanguageProvider>
+            <div className='relative flex min-h-screen flex-col'>
+              <SiteHeader />
+              <AnnouncementBanner />
+              <div className='flex-1'>{children}</div>
+              <SiteFooter />
+            </div>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
