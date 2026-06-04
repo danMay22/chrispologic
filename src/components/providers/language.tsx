@@ -23,7 +23,7 @@ const translations = {
     'nav.details': 'Details',
 
     // Hero
-    'hero.label': 'New Collection — 2025',
+    'hero.label': 'New Collection — 2026',
     'hero.headline1': 'Wear What You',
     'hero.headline2': 'Believe In',
     'hero.sub': 'Chrispology — faith-inspired streetwear crafted for those who carry their identity boldly.',
@@ -197,7 +197,7 @@ const translations = {
     'nav.details': 'Détails',
 
     // Hero
-    'hero.label': 'Nouvelle Collection — 2025',
+    'hero.label': 'Nouvelle Collection — 2026',
     'hero.headline1': 'Portez Ce En Quoi',
     'hero.headline2': 'Vous Croyez',
     'hero.sub': 'Chrispology — vêtements de rue inspirés par la foi, conçus pour ceux qui portent leur identité avec fierté.',
