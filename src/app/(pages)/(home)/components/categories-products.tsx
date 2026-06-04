@@ -14,7 +14,7 @@ export default function CategoriesAndProducts() {
   const [active, setActive] = useState('all');
   const [search, setSearch] = useState('');
   const [sort, setSort] = useState('default');
-  const [maxPrice, setMaxPrice] = useState(2000);
+  const [maxPrice, setMaxPrice] = useState(4000);
   const [showFilters, setShowFilters] = useState(false);
 
   const CATEGORIES = [
@@ -53,8 +53,8 @@ export default function CategoriesAndProducts() {
       return 0;
     }), [active, search, sort, maxPrice]);
 
-  const clearAll = () => { setActive('all'); setSearch(''); setSort('default'); setMaxPrice(2000); };
-  const hasFilters = active !== 'all' || search || sort !== 'default' || maxPrice < 2000;
+  const clearAll = () => { setActive('all'); setSearch(''); setSort('default'); setMaxPrice(4000); };
+  const hasFilters = active !== 'all' || search || sort !== 'default' || maxPrice < 4000;
 
   return (
     <>
@@ -137,8 +137,8 @@ export default function CategoriesAndProducts() {
                 <label className='text-xs font-bold uppercase tracking-widest mb-2 block'>
                   {t('filter.maxPrice')} — <span className='text-muted-foreground font-normal normal-case tracking-normal'>R{maxPrice}</span>
                 </label>
-                <input type='range' min={0} max={2000} step={50} value={maxPrice} onChange={(e) => setMaxPrice(Number(e.target.value))} className='w-full accent-foreground' />
-                <div className='flex justify-between text-xs text-muted-foreground mt-1'><span>R0</span><span>R2000</span></div>
+                <input type='range' min={0} max={4000} step={50} value={maxPrice} onChange={(e) => setMaxPrice(Number(e.target.value))} className='w-full accent-foreground' />
+                <div className='flex justify-between text-xs text-muted-foreground mt-1'><span>R0</span><span>R4000</span></div>
               </div>
               <div>
                 <p className='text-xs font-bold uppercase tracking-widest mb-2'>{t('filter.availability')}</p>

@@ -8,7 +8,7 @@ export default function HeroSection() {
   const { t } = useLanguage();
   return (
     <section className='relative h-[92vh] w-full overflow-hidden'>
-      <div className='absolute inset-0 bg-cover bg-center bg-no-repeat gpu' style={{ backgroundImage: "url('/pexels-brett-sayles-3633711.jpg')" }} />
+      <div className='absolute inset-0 bg-cover bg-center bg-no-repeat gpu' style={{ backgroundImage: "url('/fashion-clothing-hangers-show.jpg')" }} />
       <div className='absolute inset-0 bg-black/55' />
       <div className='relative z-10 flex h-full flex-col items-center justify-center text-center px-6'>
         <motion.p

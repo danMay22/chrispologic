@@ -8,18 +8,18 @@ import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carouse
 import { useLanguage } from '@/components/providers/language';
 
 const newArrivals = [
-  { id: 'item-1',  title: 'Faith Over Fear Tee',    summary: 'Bold statement tee. 100% premium cotton, oversized fit.',              image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.35 (1).jpeg',  tag: 'New' },
-  { id: 'item-2',  title: 'Grace Hoodie',            summary: 'Heavy-weight fleece hoodie with embroidered logo.',                   image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.37 (1).jpeg',  tag: 'New' },
-  { id: 'item-3',  title: 'Classic Leather Shoes',   summary: 'Premium leather dress shoes with a timeless silhouette.',             image: '/Shoes/WhatsApp Image 2026-06-02 at 20.19.39.jpeg',       tag: 'New' },
-  { id: 'item-4',  title: 'Executive Suit',          summary: 'Tailored two-piece suit in premium fabric.',                         image: '/Suits/WhatsApp Image 2026-06-02 at 20.33.48.jpeg',       tag: 'New' },
-  { id: 'item-5',  title: 'Formal Oxford Shoes',     summary: 'Handcrafted oxford shoes with a polished finish.',                   image: '/Shoes/WhatsApp Image 2026-06-02 at 20.21.25.jpeg',       tag: 'Sale' },
-  { id: 'item-6',  title: 'Slim Fit Suit',           summary: 'Modern slim fit suit with a sleek design.',                          image: '/Suits/WhatsApp Image 2026-06-02 at 20.39.16.jpeg',       tag: 'Sale' },
-  { id: 'item-7',  title: 'Chrispology Graphic Tee', summary: 'Statement graphic tee with bold Chrispology design.',                image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.40 (1).jpeg',  tag: 'New' },
-  { id: 'item-8',  title: 'Casual Loafers',          summary: 'Comfortable slip-on loafers for a relaxed look.',                    image: '/Shoes/WhatsApp Image 2026-06-02 at 20.22.36.jpeg',       tag: 'Limited' },
-  { id: 'item-9',  title: 'Three-Piece Suit',        summary: 'Complete three-piece suit with vest.',                               image: '/Suits/WhatsApp Image 2026-06-02 at 20.43.26.jpeg',       tag: 'Limited' },
-  { id: 'item-10', title: 'Premium Polo Shirt',      summary: 'Elevated polo with subtle Chrispology branding.',                    image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.48 (1).jpeg',  tag: 'New' },
-  { id: 'item-11', title: 'Derby Dress Shoes',       summary: 'Versatile derby shoes for office to evening.',                       image: '/Shoes/WhatsApp Image 2026-06-02 at 20.23.54.jpeg',       tag: 'New' },
-  { id: 'item-12', title: 'Business Suit',           summary: 'Professional business suit for the boardroom.',                      image: '/Suits/WhatsApp Image 2026-06-02 at 20.43.32 (1).jpeg',   tag: 'Sale' },
+  { id: 'item-1',  title: 'White Dress Shirt',       summary: 'Classic white cotton dress shirt with a tailored fit.',               image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.35 (1).jpeg',  tag: 'Sale' },
+  { id: 'item-2',  title: 'Formal Button-Up Shirt',  summary: 'Smart formal shirt with a clean finish.',                            image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.37 (1).jpeg',  tag: 'New' },
+  { id: 'item-3',  title: 'Black Leather Shoes',     summary: 'Classic black leather shoes with a polished finish.',                image: '/Shoes/WhatsApp Image 2026-06-02 at 20.19.39.jpeg',       tag: 'New' },
+  { id: 'item-4',  title: 'Navy Two-Piece Suit',     summary: 'Tailored navy suit in a classic two-piece cut.',                     image: '/Suits/WhatsApp Image 2026-06-02 at 20.33.48.jpeg',       tag: 'New' },
+  { id: 'item-5',  title: 'Brown Oxford Shoes',      summary: 'Handcrafted brown oxford shoes. A timeless choice.',                 image: '/Shoes/WhatsApp Image 2026-06-02 at 20.21.25.jpeg',       tag: 'Sale' },
+  { id: 'item-6',  title: 'Charcoal Slim Suit',      summary: 'Modern charcoal suit with a slim silhouette.',                       image: '/Suits/WhatsApp Image 2026-06-02 at 20.39.16.jpeg',       tag: 'Sale' },
+  { id: 'item-7',  title: 'Striped Casual Shirt',    summary: 'Light striped shirt for smart casual wear.',                         image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.40 (1).jpeg',  tag: 'New' },
+  { id: 'item-8',  title: 'Tan Loafers',             summary: 'Classic tan loafers for a relaxed yet polished look.',                image: '/Shoes/WhatsApp Image 2026-06-02 at 20.22.36.jpeg',       tag: 'Limited' },
+  { id: 'item-9',  title: 'Black Three-Piece Suit',  summary: 'Classic black three-piece suit with matching vest.',                  image: '/Suits/WhatsApp Image 2026-06-02 at 20.43.26.jpeg',       tag: 'Limited' },
+  { id: 'item-10', title: 'Polo Shirt',              summary: 'Classic polo shirt with a neat collar.',                             image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.48 (1).jpeg',  tag: 'New' },
+  { id: 'item-11', title: 'Brown Derby Shoes',       summary: 'Versatile brown derby shoes for everyday wear.',                     image: '/Shoes/WhatsApp Image 2026-06-02 at 20.23.54.jpeg',       tag: 'New' },
+  { id: 'item-12', title: 'Grey Business Suit',      summary: 'Professional grey suit for the workplace.',                          image: '/Suits/WhatsApp Image 2026-06-02 at 20.43.32 (1).jpeg',   tag: 'Sale' },
 ];
 
 export default function NewArrivals() {

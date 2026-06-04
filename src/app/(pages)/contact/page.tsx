@@ -66,7 +66,7 @@ export default function ContactPage() {
               <p className='mt-3 text-lg text-muted-foreground max-w-xl'>{t('story.intro')}</p>
 
               <div className='my-8 aspect-[16/6] w-full overflow-hidden'>
-                <img src='/pexels-brett-sayles-3633711.jpg' alt='Chrispology brand' className='h-full w-full object-cover object-center' />
+                <img src='/fast-fashion-concept-with-full-clothing-store.jpg' alt='Chrispology brand' className='h-full w-full object-cover object-center' />
               </div>
 
               <section id='origin' ref={(r) => addSectionRef('origin', r)} className='mb-10'>
