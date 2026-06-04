@@ -43,7 +43,7 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
           className='mt-10 flex items-center gap-4 max-lg:flex-col'
         >
-          <Link href='/' className='bg-white text-black font-bold uppercase tracking-widest px-10 py-3 text-sm hover:bg-white/90 transition-fast active:scale-95 gpu'>
+          <Link href='/#new-arrivals' className='bg-white text-black font-bold uppercase tracking-widest px-10 py-3 text-sm hover:bg-white/90 transition-fast active:scale-95 gpu'>
             {t('hero.shopBtn')}
           </Link>
           <Link href='/contact' className='border border-white text-white font-bold uppercase tracking-widest px-10 py-3 text-sm hover:bg-white/10 transition-fast active:scale-95 gpu'>

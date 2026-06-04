@@ -40,7 +40,7 @@ export default function NewArrivals() {
   }, [carouselApi]);
 
   return (
-    <section className='py-20'>
+    <section id='new-arrivals' className='py-20'>
       <div className='px-10'>
         <div className='mb-10 flex flex-col justify-between md:flex-row md:items-end'>
           <div>
