@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@/components/providers/theme';
 import { LanguageProvider } from '@/components/providers/language';
+import { PageTransition } from '@/components/providers/page-transition';
 import { AnnouncementBanner } from '@/components/ui/announcement-banner';
 import SiteFooter from '@/components/ui/site-footer';
 import { SiteHeader } from '@/components/ui/site-header';
@@ -23,7 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className='relative flex min-h-screen flex-col'>
               <SiteHeader />
               <AnnouncementBanner />
-              <div className='flex-1'>{children}</div>
+              <PageTransition>
+                <div className='flex-1'>{children}</div>
+              </PageTransition>
               <SiteFooter />
             </div>
           </LanguageProvider>

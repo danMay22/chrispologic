@@ -8,21 +8,18 @@ import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carouse
 import { useLanguage } from '@/components/providers/language';
 
 const newArrivals = [
-  { id: 'item-1',  title: 'Faith Over Fear Tee',    summary: 'Bold statement tee. 100% premium cotton, oversized fit.',              image: '/pexels-jibarofoto-2014773.jpg',          tag: 'New' },
-  { id: 'item-2',  title: 'Grace Hoodie',            summary: 'Heavy-weight fleece hoodie with embroidered logo.',                   image: '/pexels-jibarofoto-2014774.jpg',          tag: 'New' },
-  { id: 'item-3',  title: 'Chrispology Cap',         summary: 'Structured 6-panel cap with signature wordmark.',                    image: '/pexels-jibarofoto-2351722.jpg',          tag: 'Limited' },
-  { id: 'item-4',  title: 'Blessed Cargo Pants',     summary: 'Relaxed-fit cargo with subtle scripture detail.',                    image: '/pexels-matthardy-2602543.jpg',           tag: 'New' },
-  { id: 'item-5',  title: 'Identity Jacket',         summary: 'Lightweight bomber. Wear your identity on your sleeve.',             image: '/pexels-david-bartus-43782-915674.jpg',   tag: 'Coming Soon' },
-  { id: 'item-6',  title: 'Anointed Tote',           summary: 'Canvas tote with screen-printed Chrispology mark.',                 image: '/pexels-brett-sayles-3633711.jpg',        tag: 'New' },
-  { id: 'item-7',  title: 'Chosen Wristband',        summary: 'Silicone wristband. Daily reminder of your identity.',              image: '/pexels-yungsaac-2305084.jpg',            tag: 'Limited' },
-  { id: 'item-8',  title: 'Redeemed Shorts',         summary: 'Mesh athletic shorts with embroidered back pocket.',                image: '/pexels-nikko-tan-12261-133699.jpg',      tag: 'New' },
-  { id: 'item-9',  title: 'Purpose Crewneck',        summary: 'Heavyweight crewneck sweatshirt. Minimal design, maximum meaning.', image: '/pexels-jibarofoto-2014773.jpg',          tag: 'New' },
-  { id: 'item-10', title: 'Covenant Joggers',        summary: 'Tapered joggers with side-seam scripture print.',                   image: '/pexels-matthardy-2602543.jpg',           tag: 'New' },
-  { id: 'item-11', title: 'Sanctified Snapback',     summary: 'Flat-brim snapback with embroidered cross detail.',                 image: '/pexels-jibarofoto-2351722.jpg',          tag: 'Limited' },
-  { id: 'item-12', title: 'Overflow Bucket Hat',     summary: 'Washed cotton bucket hat. Unstructured, relaxed fit.',             image: '/pexels-david-bartus-43782-915674.jpg',   tag: 'New' },
-  { id: 'item-13', title: 'Remnant Long Sleeve',     summary: 'Garment-dyed long sleeve tee with back graphic.',                  image: '/pexels-jibarofoto-2014774.jpg',          tag: 'New' },
-  { id: 'item-14', title: 'Worthy Zip Hoodie',       summary: 'Full-zip hoodie with chenille patch on chest.',                    image: '/pexels-brett-sayles-3633711.jpg',        tag: 'Coming Soon' },
-  { id: 'item-15', title: 'Sealed Crossbody Bag',    summary: 'Compact crossbody with adjustable strap and zip closure.',         image: '/pexels-yungsaac-2305084.jpg',            tag: 'New' },
+  { id: 'item-1',  title: 'Faith Over Fear Tee',    summary: 'Bold statement tee. 100% premium cotton, oversized fit.',              image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.35 (1).jpeg',  tag: 'New' },
+  { id: 'item-2',  title: 'Grace Hoodie',            summary: 'Heavy-weight fleece hoodie with embroidered logo.',                   image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.37 (1).jpeg',  tag: 'New' },
+  { id: 'item-3',  title: 'Classic Leather Shoes',   summary: 'Premium leather dress shoes with a timeless silhouette.',             image: '/Shoes/WhatsApp Image 2026-06-02 at 20.19.39.jpeg',       tag: 'New' },
+  { id: 'item-4',  title: 'Executive Suit',          summary: 'Tailored two-piece suit in premium fabric.',                         image: '/Suits/WhatsApp Image 2026-06-02 at 20.33.48.jpeg',       tag: 'New' },
+  { id: 'item-5',  title: 'Formal Oxford Shoes',     summary: 'Handcrafted oxford shoes with a polished finish.',                   image: '/Shoes/WhatsApp Image 2026-06-02 at 20.21.25.jpeg',       tag: 'Sale' },
+  { id: 'item-6',  title: 'Slim Fit Suit',           summary: 'Modern slim fit suit with a sleek design.',                          image: '/Suits/WhatsApp Image 2026-06-02 at 20.39.16.jpeg',       tag: 'Sale' },
+  { id: 'item-7',  title: 'Chrispology Graphic Tee', summary: 'Statement graphic tee with bold Chrispology design.',                image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.40 (1).jpeg',  tag: 'New' },
+  { id: 'item-8',  title: 'Casual Loafers',          summary: 'Comfortable slip-on loafers for a relaxed look.',                    image: '/Shoes/WhatsApp Image 2026-06-02 at 20.22.36.jpeg',       tag: 'Limited' },
+  { id: 'item-9',  title: 'Three-Piece Suit',        summary: 'Complete three-piece suit with vest.',                               image: '/Suits/WhatsApp Image 2026-06-02 at 20.43.26.jpeg',       tag: 'Limited' },
+  { id: 'item-10', title: 'Premium Polo Shirt',      summary: 'Elevated polo with subtle Chrispology branding.',                    image: '/Shirts/WhatsApp Image 2026-06-02 at 20.43.48 (1).jpeg',  tag: 'New' },
+  { id: 'item-11', title: 'Derby Dress Shoes',       summary: 'Versatile derby shoes for office to evening.',                       image: '/Shoes/WhatsApp Image 2026-06-02 at 20.23.54.jpeg',       tag: 'New' },
+  { id: 'item-12', title: 'Business Suit',           summary: 'Professional business suit for the boardroom.',                      image: '/Suits/WhatsApp Image 2026-06-02 at 20.43.32 (1).jpeg',   tag: 'Sale' },
 ];
 
 export default function NewArrivals() {
@@ -64,9 +61,9 @@ export default function NewArrivals() {
         <CarouselContent className='-ml-0 pl-10'>
           {newArrivals.map((item) => (
             <CarouselItem key={item.id} className='pl-6 md:basis-[380px] basis-[300px]'>
-              <div className='group cursor-pointer'>
+              <div className='group cursor-pointer gpu'>
                 <div className='relative aspect-[3/4] overflow-hidden bg-muted'>
-                  <img src={item.image} alt={item.title} className='h-full w-full object-cover object-center transition duration-500 group-hover:scale-105' />
+                  <img src={item.image} alt={item.title} loading='lazy' decoding='async' className='h-full w-full object-cover object-center transition-transform duration-500 ease-out gpu group-hover:scale-105' />
                   <span className='absolute top-3 left-3 bg-foreground text-background text-[10px] font-bold uppercase tracking-widest px-2 py-1'>{item.tag}</span>
                 </div>
                 <div className='pt-4'>

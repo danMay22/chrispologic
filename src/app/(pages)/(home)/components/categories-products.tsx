@@ -3,10 +3,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { PRODUCTS } from '@/data/products';
 import { ArrowRight, Shirt, ShoppingBag, Footprints, Watch, Layers, Tag, Sparkles, Search, SlidersHorizontal, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { useLanguage } from '@/components/providers/language';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CategoriesAndProducts() {
   const { t } = useLanguage();
@@ -20,6 +21,7 @@ export default function CategoriesAndProducts() {
     { id: 'all',         label: t('categories.all'),        icon: <Layers className='size-4' /> },
     { id: 'suits',       label: t('categories.suits'),      icon: <Shirt className='size-4' /> },
     { id: 'shirts',      label: t('categories.shirts'),     icon: <Shirt className='size-4' /> },
+    { id: 'shoes',       label: t('categories.shoes'),      icon: <Footprints className='size-4' /> },
     { id: 'golf-shirts', label: t('categories.golfShirts'), icon: <Sparkles className='size-4' /> },
     { id: 'bottoms',     label: t('categories.bottoms'),    icon: <Footprints className='size-4' /> },
     { id: 'accessories', label: t('categories.accessories'),icon: <Watch className='size-4' /> },
@@ -34,7 +36,7 @@ export default function CategoriesAndProducts() {
     { id: 'name-asc',   label: t('filter.nameAZ') },
   ];
 
-  const filtered = PRODUCTS
+  const filtered = useMemo(() => PRODUCTS
     .filter((p) => {
       if (active === 'sale') return !!p.salePrice;
       if (active !== 'all' && p.category !== active) return false;
@@ -49,7 +51,7 @@ export default function CategoriesAndProducts() {
       if (sort === 'price-desc') return pb - pa;
       if (sort === 'name-asc')   return a.name.localeCompare(b.name);
       return 0;
-    });
+    }), [active, search, sort, maxPrice]);
 
   const clearAll = () => { setActive('all'); setSearch(''); setSort('default'); setMaxPrice(2000); };
   const hasFilters = active !== 'all' || search || sort !== 'default' || maxPrice < 2000;
@@ -76,7 +78,7 @@ export default function CategoriesAndProducts() {
                 key={cat.id}
                 onClick={() => setActive(cat.id)}
                 className={cn(
-                  'flex items-center gap-2 border px-4 py-2.5 text-sm font-semibold uppercase tracking-wider transition-colors',
+                  'flex items-center gap-2 border px-4 py-2.5 text-sm font-semibold uppercase tracking-wider transition-all duration-150 active:scale-95 gpu',
                   active === cat.id ? 'bg-foreground text-background border-foreground' : 'bg-background text-foreground border-border hover:bg-muted',
                 )}
               >
@@ -172,33 +174,44 @@ export default function CategoriesAndProducts() {
             </p>
           </div>
           <div className='grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
-            {filtered.map((product) => (
-              <Link key={product.id} href={`/product/${product.id}`} className='group block'>
-                <Card className='overflow-hidden rounded-none border p-0 h-full'>
-                  <CardHeader className='relative p-0'>
-                    <div className='aspect-[3/4] overflow-hidden'>
-                      <img src={product.images[0]} alt={product.name} className='h-full w-full object-cover object-center transition duration-500 group-hover:scale-105' />
-                    </div>
-                    {product.badge && (
-                      <span className={cn('absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest px-2 py-1 text-white', product.badgeColor)}>
-                        {product.badge}
-                      </span>
-                    )}
-                  </CardHeader>
-                  <CardContent className='p-4 flex flex-col gap-1'>
-                    <CardTitle className='font-sans font-black uppercase tracking-wider text-base'>{product.name}</CardTitle>
-                    <CardDescription className='text-xs line-clamp-2'>{product.description}</CardDescription>
-                    <div className='mt-2 flex items-center gap-2'>
-                      {product.salePrice ? (
-                        <><span className='font-bold text-sm'>R{product.salePrice}</span><span className='text-xs text-muted-foreground line-through'>R{product.price}</span></>
-                      ) : (
-                        <span className='font-bold text-sm'>R{product.price}</span>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+            <AnimatePresence mode='popLayout'>
+              {filtered.map((product, i) => (
+                <motion.div
+                  key={product.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2, delay: i * 0.03, ease: [0.4, 0, 0.2, 1] }}
+                >
+                  <Link href={`/product/${product.id}`} className='group block'>
+                    <Card className='overflow-hidden rounded-none border p-0 h-full hover-lift gpu'>
+                      <CardHeader className='relative p-0'>
+                        <div className='aspect-[3/4] overflow-hidden'>
+                          <img src={product.images[0]} alt={product.name} loading='lazy' decoding='async' className='h-full w-full object-cover object-center transition-transform duration-500 ease-out gpu group-hover:scale-105' />
+                        </div>
+                        {product.badge && (
+                          <span className={cn('absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest px-2 py-1 text-white', product.badgeColor)}>
+                            {product.badge}
+                          </span>
+                        )}
+                      </CardHeader>
+                      <CardContent className='p-4 flex flex-col gap-1'>
+                        <CardTitle className='font-sans font-black uppercase tracking-wider text-base'>{product.name}</CardTitle>
+                        <CardDescription className='text-xs line-clamp-2'>{product.description}</CardDescription>
+                        <div className='mt-2 flex items-center gap-2'>
+                          {product.salePrice ? (
+                            <><span className='font-bold text-sm'>R{product.salePrice}</span><span className='text-xs text-muted-foreground line-through'>R{product.price}</span></>
+                          ) : (
+                            <span className='font-bold text-sm'>R{product.price}</span>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
           {filtered.length === 0 && (
             <div className='py-20 text-center text-muted-foreground text-sm uppercase tracking-widest'>{t('filter.noItems')}</div>

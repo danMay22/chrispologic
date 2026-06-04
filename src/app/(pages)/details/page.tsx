@@ -12,7 +12,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import type { User } from '@supabase/supabase-js';
 
-const CATEGORIES = ['suits', 'shirts', 'golf-shirts', 'bottoms', 'accessories', 'bags'];
+const CATEGORIES = ['suits', 'shirts', 'shoes', 'golf-shirts', 'bottoms', 'accessories', 'bags'];
 const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'One Size'];
 
 type FormData = {

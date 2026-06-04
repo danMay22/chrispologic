@@ -8,6 +8,7 @@ import { PRODUCTS } from '@/data/products';
 import { useLanguage } from '@/components/providers/language';
 import { cn } from '@/lib/utils';
 import { CircleCheck, CircleX, Star, StarHalf } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useParams, useRouter } from 'next/navigation';
 import { useState } from 'react';
 
@@ -61,19 +62,23 @@ export default function ProductPage() {
 
   return (
     <section className='py-16 px-10 max-w-7xl mx-auto'>
-      <button onClick={() => router.back()} className='mb-8 text-xs font-semibold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors'>
+      <button onClick={() => router.back()} className='mb-8 text-xs font-semibold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-fast'>
         {t('product.back')}
       </button>
 
       <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
         {/* Image gallery */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+        >
           <Carousel className='w-full'>
             <CarouselContent>
               {product.images.map((src, i) => (
                 <CarouselItem key={i}>
                   <div className='aspect-[3/4] overflow-hidden bg-muted'>
-                    <img src={src} alt={`${product.name} ${i + 1}`} className='h-full w-full object-cover object-center' />
+                    <img src={src} alt={`${product.name} ${i + 1}`} className='h-full w-full object-cover object-center gpu' />
                   </div>
                 </CarouselItem>
               ))}
@@ -84,15 +89,20 @@ export default function ProductPage() {
           {/* Thumbnails */}
           <div className='mt-3 flex gap-2 overflow-x-auto'>
             {product.images.map((src, i) => (
-              <button key={i} onClick={() => setActiveImg(i)} className={cn('h-20 w-16 shrink-0 overflow-hidden border transition-colors', activeImg === i ? 'border-foreground' : 'border-border')}>
+              <button key={i} onClick={() => setActiveImg(i)} className={cn('h-20 w-16 shrink-0 overflow-hidden border transition-all duration-150 gpu', activeImg === i ? 'border-foreground scale-105' : 'border-border hover:border-foreground/50')}>
                 <img src={src} alt='' className='h-full w-full object-cover object-center' />
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Info */}
-        <div className='space-y-6'>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+          className='space-y-6'
+        >
           <div>
             {product.badge && (
               <span className={cn('text-[10px] font-bold uppercase tracking-widest px-2 py-1 text-white mb-3 inline-block', product.badgeColor)}>
@@ -149,7 +159,7 @@ export default function ProductPage() {
             </RadioGroup>
           </div>
 
-          <Button size='lg' className='w-full rounded-none font-black uppercase tracking-widest text-base' disabled={!selectedSize} onClick={handleBuy}>
+          <Button size='lg' className='w-full rounded-none font-black uppercase tracking-widest text-base active:scale-[0.98] transition-transform gpu' disabled={!selectedSize} onClick={handleBuy}>
             {selectedSize ? `${t('product.buyWhatsApp')} — R${product.salePrice ?? product.price}` : t('product.selectFirst')}
           </Button>
           {!selectedSize && <p className='text-xs text-muted-foreground text-center -mt-3'>{t('product.selectNote')}</p>}
@@ -170,7 +180,7 @@ export default function ProductPage() {
               ))}
             </dl>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

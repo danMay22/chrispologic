@@ -21,7 +21,7 @@ export function SiteHeader() {
   ];
 
   return (
-    <header className='bg-background sticky top-0 z-40 w-full border-b'>
+    <header className='bg-background/80 backdrop-blur-lg sticky top-0 z-40 w-full border-b transition-all duration-200'>
       <div className='w-full px-10 flex h-16 items-center justify-between'>
         <Link href='/' className='flex items-center'>
           <span className='font-sans text-[2rem] font-black tracking-widest uppercase border border-current px-2 py-0.5'>
