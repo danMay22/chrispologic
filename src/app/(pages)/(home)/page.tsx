@@ -4,8 +4,8 @@ import NewArrivals from './components/new-arrivals';
 import CategoriesAndProducts from './components/categories-products';
 
 export const metadata: Metadata = {
-  title: 'Chrispology — Faith-Inspired Streetwear',
-  description: 'Shop the latest Chrispology collection. Faith-inspired streetwear crafted for those who carry their identity boldly.',
+  title: 'Pax Clothing — Premium Menswear',
+  description: 'Shop the latest Pax Clothing collection. Suits, shoes, and shirts for the modern gentleman.',
 };
 
 export default function Page() {

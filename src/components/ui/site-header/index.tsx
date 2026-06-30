@@ -25,7 +25,7 @@ export function SiteHeader() {
       <div className='w-full px-10 flex h-16 items-center justify-between'>
         <Link href='/' className='flex items-center'>
           <span className='font-sans text-[2rem] font-black tracking-widest uppercase border border-current px-2 py-0.5'>
-            Chrispology
+            Pax Clothing
           </span>
         </Link>
 

@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Chrispology',
-  description: 'Faith-inspired streetwear crafted for those who carry their identity boldly.',
+  name: 'Pax Clothing',
+  description: 'Premium menswear — suits, shoes, and shirts for the modern gentleman.',
   mainNav: [
     { title: 'Our Story', href: '/contact' },
     { title: 'Details', href: '/details' },
