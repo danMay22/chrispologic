@@ -1,41 +1,18 @@
 'use client';
 
 import { useLanguage } from '@/components/providers/language';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-
-const heroImages = [
-  '/image/fashion-clothing-hangers-show.jpg',
-  '/image/pexels-ai25studioai-5264925.jpg',
-  '/image/pexels-olly-3755706.jpg',
-];
 
 export default function HeroSection() {
   const { t } = useLanguage();
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className='relative h-[92vh] w-full overflow-hidden'>
-      {/* Background carousel */}
-      <AnimatePresence mode='popLayout'>
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
-          className='absolute inset-0 bg-cover bg-center bg-no-repeat gpu'
-          style={{ backgroundImage: `url('${heroImages[current]}')` }}
-        />
-      </AnimatePresence>
+      {/* Light mode background */}
+      <div className='absolute inset-0 bg-cover bg-center bg-no-repeat gpu dark:hidden' style={{ backgroundImage: "url('/image/fashion-clothing-hangers-show.jpg')" }} />
+      {/* Dark mode background */}
+      <div className='absolute inset-0 bg-cover bg-center bg-no-repeat gpu hidden dark:block' style={{ backgroundImage: "url('/image/pexels-ai25studioai-5264925.jpg')" }} />
 
       <div className='absolute inset-0 bg-black/55' />
 
@@ -79,17 +56,6 @@ export default function HeroSection() {
             {t('hero.storyBtn')}
           </Link>
         </motion.div>
-
-        {/* Carousel indicators */}
-        <div className='absolute bottom-32 flex gap-2'>
-          {heroImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-8 bg-white' : 'w-4 bg-white/40'}`}
-            />
-          ))}
-        </div>
       </div>
 
       <div className='absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent' />
