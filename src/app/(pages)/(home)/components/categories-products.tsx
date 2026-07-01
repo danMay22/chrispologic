@@ -2,20 +2,25 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { PRODUCTS } from '@/data/products';
-import { ArrowRight, Shirt, ShoppingBag, Footprints, Watch, Layers, Tag, Sparkles, Search, SlidersHorizontal, X } from 'lucide-react';
+import { EditProductDialog } from '@/components/ui/edit-product-dialog';
+import { useAuth } from '@/components/providers/auth';
+import { ArrowRight, Shirt, ShoppingBag, Footprints, Watch, Layers, Tag, Sparkles, Search, SlidersHorizontal, X, Pencil } from 'lucide-react';
 import { useState, useMemo } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { useLanguage } from '@/components/providers/language';
 import { motion, AnimatePresence } from 'framer-motion';
+import type { Product } from '@/data/products';
 
 export default function CategoriesAndProducts() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const { user } = useAuth();
   const [active, setActive] = useState('all');
   const [search, setSearch] = useState('');
   const [sort, setSort] = useState('default');
   const [maxPrice, setMaxPrice] = useState(4000);
   const [showFilters, setShowFilters] = useState(false);
+  const [editProduct, setEditProduct] = useState<Product | null>(null);
 
   const CATEGORIES = [
     { id: 'all',         label: t('categories.all'),        icon: <Layers className='size-4' /> },
@@ -184,31 +189,42 @@ export default function CategoriesAndProducts() {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.2, delay: i * 0.03, ease: [0.4, 0, 0.2, 1] }}
                 >
-                  <Link href={`/product/${product.id}`} className='group block'>
-                    <Card className='overflow-hidden rounded-none border p-0 h-full hover-lift gpu'>
-                      <CardHeader className='relative p-0'>
-                        <div className='aspect-[3/4] overflow-hidden'>
-                          <img src={product.images[0]} alt={product.name} loading='lazy' decoding='async' className='h-full w-full object-cover object-center transition-transform duration-500 ease-out gpu group-hover:scale-105' />
-                        </div>
-                        {product.badge && (
-                          <span className={cn('absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest px-2 py-1 text-white', product.badgeColor)}>
-                            {product.badge}
-                          </span>
-                        )}
-                      </CardHeader>
-                      <CardContent className='p-4 flex flex-col gap-1'>
-                        <CardTitle className='font-sans font-black uppercase tracking-wider text-base'>{product.name}</CardTitle>
-                        <CardDescription className='text-xs line-clamp-2'>{product.description}</CardDescription>
-                        <div className='mt-2 flex items-center gap-2'>
-                          {product.salePrice ? (
-                            <><span className='font-bold text-sm'>R{product.salePrice}</span><span className='text-xs text-muted-foreground line-through'>R{product.price}</span></>
-                          ) : (
-                            <span className='font-bold text-sm'>R{product.price}</span>
+                  <div className='relative group'>
+                    <Link href={`/product/${product.id}`} className='block'>
+                      <Card className='overflow-hidden rounded-none border p-0 h-full hover-lift gpu'>
+                        <CardHeader className='relative p-0'>
+                          <div className='aspect-[3/4] overflow-hidden'>
+                            <img src={product.images[0]} alt={product.name} loading='lazy' decoding='async' className='h-full w-full object-cover object-center transition-transform duration-500 ease-out gpu group-hover:scale-105' />
+                          </div>
+                          {product.badge && (
+                            <span className={cn('absolute top-3 left-3 text-[10px] font-bold uppercase tracking-widest px-2 py-1 text-white', product.badgeColor)}>
+                              {product.badge}
+                            </span>
                           )}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
+                        </CardHeader>
+                        <CardContent className='p-4 flex flex-col gap-1'>
+                          <CardTitle className='font-sans font-black uppercase tracking-wider text-base'>{product.name}</CardTitle>
+                          <CardDescription className='text-xs line-clamp-2'>{language === 'fr' ? product.descriptionFr : product.description}</CardDescription>
+                          <div className='mt-2 flex items-center gap-2'>
+                            {product.salePrice ? (
+                              <><span className='font-bold text-sm'>R{product.salePrice}</span><span className='text-xs text-muted-foreground line-through'>R{product.price}</span></>
+                            ) : (
+                              <span className='font-bold text-sm'>R{product.price}</span>
+                            )}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                    {user && (
+                      <button
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setEditProduct(product); }}
+                        className='absolute top-3 right-3 z-10 bg-white/90 dark:bg-black/80 border border-border p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-foreground hover:text-background'
+                        title='Edit product'
+                      >
+                        <Pencil className='size-4' />
+                      </button>
+                    )}
+                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -218,6 +234,15 @@ export default function CategoriesAndProducts() {
           )}
         </div>
       </section>
+
+      {/* Edit Dialog */}
+      {editProduct && (
+        <EditProductDialog
+          product={editProduct}
+          open={!!editProduct}
+          onOpenChange={(open) => { if (!open) setEditProduct(null); }}
+        />
+      )}
     </>
   );
 }

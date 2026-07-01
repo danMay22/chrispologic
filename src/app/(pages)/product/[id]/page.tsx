@@ -36,7 +36,7 @@ function Stars({ rate }: { rate: number }) {
 export default function ProductPage() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const product = PRODUCTS.find((p) => p.id === id);
   const [selectedSize, setSelectedSize] = useState('');
   const [activeImg, setActiveImg] = useState(0);
@@ -130,7 +130,7 @@ export default function ProductPage() {
             )}
           </div>
 
-          <p className='text-muted-foreground leading-relaxed'>{product.description}</p>
+          <p className='text-muted-foreground leading-relaxed'>{language === 'fr' ? product.descriptionFr : product.description}</p>
 
           <div>
             <p className='text-sm font-bold uppercase tracking-widest mb-3'>

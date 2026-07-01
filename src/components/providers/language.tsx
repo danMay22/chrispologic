@@ -15,7 +15,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations = {
   en: {
     // Banner
-    'banner.text': 'New arrivals just dropped — shop the latest Chrispology collection.',
+    'banner.text': 'New arrivals just dropped — shop the latest Pax Clothing collection.',
     'banner.cta': 'Shop now →',
 
     // Header
@@ -24,9 +24,9 @@ const translations = {
 
     // Hero
     'hero.label': 'New Collection — 2026',
-    'hero.headline1': 'Wear What You',
-    'hero.headline2': 'Believe In',
-    'hero.sub': 'Chrispology — faith-inspired streetwear crafted for those who carry their identity boldly.',
+    'hero.headline1': 'Dress With',
+    'hero.headline2': 'Purpose',
+    'hero.sub': 'Pax Clothing — premium suits, shoes, and shirts for the modern gentleman.',
     'hero.shopBtn': 'Shop New Arrivals',
     'hero.storyBtn': 'Our Story',
 
@@ -84,23 +84,23 @@ const translations = {
     // Contact / Our Story
     'story.badge': 'The Brand',
     'story.title': 'Our Story',
-    'story.intro': "Chrispology wasn't born in a boardroom. It started with a conviction — that faith deserves to be worn, not hidden.",
+    'story.intro': "Pax Clothing was born from a desire to bring timeless elegance to everyday menswear — suits, shoes, and shirts crafted with care.",
     'story.toc': 'On this page',
     'story.s1Title': 'Where It Started',
-    'story.s1p1': 'Chrispology was founded in Midrand, South Africa, by a small group of creatives who believed that streetwear could carry a deeper message. What started as hand-printed tees shared among friends quickly grew into something bigger.',
-    'story.s1p2': 'The name itself is a statement — a fusion of identity, belief, and culture. Every piece we make is designed to spark a conversation, to make the wearer feel seen, and to remind them of who they are.',
+    'story.s1p1': 'Pax Clothing was founded in Midrand, South Africa, by a team of designers passionate about premium menswear. What began as a small collection of bespoke suits quickly grew into a full brand.',
+    'story.s1p2': 'The name Pax represents peace and confidence — the feeling you get when you put on something that fits perfectly. Every piece is designed to elevate your presence.',
     'story.s2Title': 'What We Stand For',
-    'story.s2p1': "We don't do fast fashion. Every drop is intentional — limited quantities, quality materials, and designs that mean something. We stand for authenticity over hype, identity over trends.",
-    'story.v1Label': 'Faith-Driven',
-    'story.v1Desc': 'Every design rooted in purpose',
+    'story.s2p1': "We don't do fast fashion. Every piece is intentional — quality materials, timeless designs, and a commitment to craftsmanship. We stand for elegance over trends.",
+    'story.v1Label': 'Craftsmanship',
+    'story.v1Desc': 'Every piece made with precision',
     'story.v2Label': 'Limited Drops',
     'story.v2Desc': 'Quality over quantity, always',
     'story.v3Label': 'Community First',
-    'story.v3Desc': 'Built by and for the culture',
+    'story.v3Desc': 'Built by and for the modern man',
     'story.s3Title': "Where We're Going",
-    'story.s3p1': "Chrispology is more than a clothing brand — it's a movement. We're building toward pop-up events, collaborations with local artists, and eventually a flagship store in Johannesburg.",
-    'story.s3p2': "If you wear Chrispology, you're not just a customer. You're part of the story. And the story is just getting started.",
-    'story.quote': '"Wear what you believe in. Live what you wear."',
+    'story.s3p1': "Pax Clothing is more than a brand — it's a statement. We're building toward pop-up events, collaborations with local tailors, and eventually a flagship store in Johannesburg.",
+    'story.s3p2': "If you wear Pax, you're not just a customer. You're part of the story. And the story is just getting started.",
+    'story.quote': '"Dress with purpose. Walk with confidence."',
 
     // Contact section
     'contact.label': 'Get In Touch',
@@ -133,11 +133,11 @@ const translations = {
     'faq.q6': 'Are your products limited edition?',
     'faq.a6': 'Many of our drops are limited. Once a size or style sells out, it may not return. We recommend ordering early when a new drop lands.',
     'faq.q7': 'How do I know my size?',
-    'faq.a7': "Each product page lists the fit type (e.g. Oversized, Regular). When in doubt, size up — or message us and we'll guide you.",
+    'faq.a7': "Each product page lists the fit type (e.g. Slim, Regular). When in doubt, size up — or message us and we'll guide you.",
 
     // Login
     'login.restricted': 'Restricted Area',
-    'login.warning': 'This section is for Chrispology administrators only. If you are a customer, please go back to the',
+    'login.warning': 'This section is for Pax Clothing administrators only. If you are a customer, please go back to the',
     'login.homepage': 'homepage',
     'login.title': 'Admin Login',
     'login.sub': 'Sign in to manage products',
@@ -149,13 +149,17 @@ const translations = {
     // Details / Admin
     'details.adminOnly': 'Admin Only',
     'details.title': 'Product Manager',
-    'details.sub': 'Add new products to the Chrispology store',
+    'details.sub': 'Add new products to the Pax Clothing store',
     'details.signOut': 'Sign Out',
     'details.addProduct': 'Add New Product',
     'details.name': 'Product Name',
-    'details.namePlaceholder': 'e.g. Faith Over Fear Tee',
+    'details.namePlaceholder': 'e.g. Executive Suit',
     'details.description': 'Description',
+    'details.descriptionEn': 'Description (English)',
+    'details.descriptionFr': 'Description (French)',
     'details.descPlaceholder': 'Describe the product…',
+    'details.descPlaceholderFr': 'Décrivez le produit…',
+    'details.descLang': 'Description Language',
     'details.price': 'Price (R)',
     'details.salePrice': 'Sale Price (R)',
     'details.optional': 'optional',
@@ -164,11 +168,11 @@ const translations = {
     'details.badgeNone': 'None',
     'details.sizes': 'Available Sizes',
     'details.material': 'Material',
-    'details.materialPlaceholder': '100% Cotton',
+    'details.materialPlaceholder': 'Premium Wool Blend',
     'details.fit': 'Fit',
-    'details.fitPlaceholder': 'Oversized',
+    'details.fitPlaceholder': 'Slim Fit',
     'details.care': 'Care',
-    'details.carePlaceholder': 'Machine Wash Cold',
+    'details.carePlaceholder': 'Dry Clean Only',
     'details.newArrival': 'Mark as New Arrival (appears in the New Arrivals carousel)',
     'details.images': 'Product Images',
     'details.uploadImages': 'Upload Images',
@@ -189,7 +193,7 @@ const translations = {
   },
   fr: {
     // Banner
-    'banner.text': 'Nouvelles arrivées — découvrez la dernière collection Chrispology.',
+    'banner.text': 'Nouvelles arrivées — découvrez la dernière collection Pax Clothing.',
     'banner.cta': 'Acheter maintenant →',
 
     // Header
@@ -198,9 +202,9 @@ const translations = {
 
     // Hero
     'hero.label': 'Nouvelle Collection — 2026',
-    'hero.headline1': 'Portez Ce En Quoi',
-    'hero.headline2': 'Vous Croyez',
-    'hero.sub': 'Chrispology — vêtements de rue inspirés par la foi, conçus pour ceux qui portent leur identité avec fierté.',
+    'hero.headline1': 'Habillez-Vous Avec',
+    'hero.headline2': 'Élégance',
+    'hero.sub': 'Pax Clothing — costumes, chaussures et chemises haut de gamme pour l\'homme moderne.',
     'hero.shopBtn': 'Voir les Nouveautés',
     'hero.storyBtn': 'Notre Histoire',
 
@@ -258,23 +262,23 @@ const translations = {
     // Contact / Our Story
     'story.badge': 'La Marque',
     'story.title': 'Notre Histoire',
-    'story.intro': "Chrispology n'est pas née dans une salle de réunion. Elle est née d'une conviction — que la foi mérite d'être portée, pas cachée.",
+    'story.intro': "Pax Clothing est née du désir d'apporter une élégance intemporelle au vestiaire masculin — costumes, chaussures et chemises confectionnés avec soin.",
     'story.toc': 'Sur cette page',
     'story.s1Title': 'Les Débuts',
-    'story.s1p1': "Chrispology a été fondée à Midrand, en Afrique du Sud, par un petit groupe de créatifs qui croyaient que le streetwear pouvait porter un message plus profond. Ce qui a commencé par des t-shirts imprimés à la main partagés entre amis est rapidement devenu quelque chose de plus grand.",
-    'story.s1p2': "Le nom lui-même est une déclaration — une fusion d'identité, de croyance et de culture. Chaque pièce que nous créons est conçue pour susciter une conversation, pour que le porteur se sente vu et se souvienne de qui il est.",
+    'story.s1p1': "Pax Clothing a été fondée à Midrand, en Afrique du Sud, par une équipe de designers passionnés par le prêt-à-porter masculin haut de gamme. Ce qui a commencé par une petite collection de costumes sur mesure est rapidement devenu une marque à part entière.",
+    'story.s1p2': "Le nom Pax représente la paix et la confiance — le sentiment que vous éprouvez lorsque vous enfilez quelque chose qui vous va parfaitement. Chaque pièce est conçue pour élever votre présence.",
     'story.s2Title': 'Ce Pour Quoi Nous Nous Battons',
-    'story.s2p1': "Nous ne faisons pas de fast fashion. Chaque lancement est intentionnel — quantités limitées, matériaux de qualité et designs qui ont du sens. Nous défendons l'authenticité plutôt que le battage médiatique, l'identité plutôt que les tendances.",
-    'story.v1Label': 'Guidé par la Foi',
-    'story.v1Desc': 'Chaque design ancré dans un but',
+    'story.s2p1': "Nous ne faisons pas de fast fashion. Chaque pièce est intentionnelle — matériaux de qualité, designs intemporels et engagement envers l'artisanat. Nous défendons l'élégance plutôt que les tendances.",
+    'story.v1Label': 'Artisanat',
+    'story.v1Desc': 'Chaque pièce fabriquée avec précision',
     'story.v2Label': 'Lancements Limités',
     'story.v2Desc': 'La qualité avant la quantité, toujours',
     'story.v3Label': 'Communauté Avant Tout',
-    'story.v3Desc': 'Construit par et pour la culture',
+    'story.v3Desc': "Construit par et pour l'homme moderne",
     'story.s3Title': 'Notre Direction',
-    'story.s3p1': "Chrispology est plus qu'une marque de vêtements — c'est un mouvement. Nous construisons vers des événements pop-up, des collaborations avec des artistes locaux, et éventuellement un magasin phare à Johannesburg.",
-    'story.s3p2': "Si vous portez Chrispology, vous n'êtes pas seulement un client. Vous faites partie de l'histoire. Et l'histoire ne fait que commencer.",
-    'story.quote': '"Portez ce en quoi vous croyez. Vivez ce que vous portez."',
+    'story.s3p1': "Pax Clothing est plus qu'une marque — c'est une déclaration. Nous construisons vers des événements pop-up, des collaborations avec des tailleurs locaux, et éventuellement un magasin phare à Johannesburg.",
+    'story.s3p2': "Si vous portez Pax, vous n'êtes pas seulement un client. Vous faites partie de l'histoire. Et l'histoire ne fait que commencer.",
+    'story.quote': '"Habillez-vous avec élégance. Marchez avec confiance."',
 
     // Contact section
     'contact.label': 'Nous Contacter',
@@ -307,11 +311,11 @@ const translations = {
     'faq.q6': 'Vos produits sont-ils en édition limitée ?',
     'faq.a6': "Beaucoup de nos lancements sont limités. Une fois qu'une taille ou un style est épuisé, il peut ne pas revenir. Nous recommandons de commander tôt lors d'un nouveau lancement.",
     'faq.q7': 'Comment connaître ma taille ?',
-    'faq.a7': "Chaque page produit indique le type de coupe (ex. Oversize, Regular). En cas de doute, prenez la taille au-dessus — ou contactez-nous et nous vous guiderons.",
+    'faq.a7': "Chaque page produit indique le type de coupe (ex. Slim, Regular). En cas de doute, prenez la taille au-dessus — ou contactez-nous et nous vous guiderons.",
 
     // Login
     'login.restricted': 'Zone Restreinte',
-    'login.warning': 'Cette section est réservée aux administrateurs de Chrispology. Si vous êtes un client, veuillez retourner à la',
+    'login.warning': 'Cette section est réservée aux administrateurs de Pax Clothing. Si vous êtes un client, veuillez retourner à la',
     'login.homepage': "page d'accueil",
     'login.title': 'Connexion Admin',
     'login.sub': 'Connectez-vous pour gérer les produits',
@@ -323,13 +327,17 @@ const translations = {
     // Details / Admin
     'details.adminOnly': 'Admin Seulement',
     'details.title': 'Gestionnaire de Produits',
-    'details.sub': 'Ajouter de nouveaux produits à la boutique Chrispology',
+    'details.sub': 'Ajouter de nouveaux produits à la boutique Pax Clothing',
     'details.signOut': 'Se Déconnecter',
     'details.addProduct': 'Ajouter un Produit',
     'details.name': 'Nom du Produit',
-    'details.namePlaceholder': 'ex. T-shirt Foi Plutôt que Peur',
+    'details.namePlaceholder': 'ex. Costume Exécutif',
     'details.description': 'Description',
+    'details.descriptionEn': 'Description (Anglais)',
+    'details.descriptionFr': 'Description (Français)',
     'details.descPlaceholder': 'Décrivez le produit…',
+    'details.descPlaceholderFr': 'Décrivez le produit en français…',
+    'details.descLang': 'Langue de la Description',
     'details.price': 'Prix (R)',
     'details.salePrice': 'Prix Soldé (R)',
     'details.optional': 'optionnel',
@@ -338,11 +346,11 @@ const translations = {
     'details.badgeNone': 'Aucun',
     'details.sizes': 'Tailles Disponibles',
     'details.material': 'Matière',
-    'details.materialPlaceholder': '100% Coton',
+    'details.materialPlaceholder': 'Mélange de Laine Premium',
     'details.fit': 'Coupe',
-    'details.fitPlaceholder': 'Oversize',
+    'details.fitPlaceholder': 'Coupe Slim',
     'details.care': 'Entretien',
-    'details.carePlaceholder': 'Lavage machine à froid',
+    'details.carePlaceholder': 'Nettoyage à sec uniquement',
     'details.newArrival': 'Marquer comme Nouvelle Arrivée (apparaît dans le carrousel)',
     'details.images': 'Images du Produit',
     'details.uploadImages': 'Télécharger des Images',
@@ -367,13 +375,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en');
 
   useEffect(() => {
-    const stored = localStorage.getItem('chrispology-lang') as Language;
+    const stored = localStorage.getItem('pax-clothing-lang') as Language;
     if (stored === 'en' || stored === 'fr') setLanguageState(stored);
   }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('chrispology-lang', lang);
+    localStorage.setItem('pax-clothing-lang', lang);
   };
 
   const t = (key: string): string =>

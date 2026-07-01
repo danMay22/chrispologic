@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@/components/providers/theme';
 import { LanguageProvider } from '@/components/providers/language';
+import { AuthProvider } from '@/components/providers/auth';
 import { PageTransition } from '@/components/providers/page-transition';
 import { AnnouncementBanner } from '@/components/ui/announcement-banner';
 import SiteFooter from '@/components/ui/site-footer';
@@ -21,14 +22,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
           <LanguageProvider>
-            <div className='relative flex min-h-screen flex-col'>
-              <SiteHeader />
-              <AnnouncementBanner />
-              <PageTransition>
-                <div className='flex-1'>{children}</div>
-              </PageTransition>
-              <SiteFooter />
-            </div>
+            <AuthProvider>
+              <div className='relative flex min-h-screen flex-col'>
+                <SiteHeader />
+                <AnnouncementBanner />
+                <PageTransition>
+                  <div className='flex-1'>{children}</div>
+                </PageTransition>
+                <SiteFooter />
+              </div>
+            </AuthProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>

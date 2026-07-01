@@ -18,6 +18,7 @@ const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'One Size'];
 type FormData = {
   name: string;
   description: string;
+  descriptionFr: string;
   price: string;
   salePrice: string;
   category: string;
@@ -31,7 +32,7 @@ type FormData = {
 };
 
 const EMPTY_FORM: FormData = {
-  name: '', description: '', price: '', salePrice: '',
+  name: '', description: '', descriptionFr: '', price: '', salePrice: '',
   category: 'shirts', badge: '', material: '', fit: '', care: '',
   sizes: [], isNewArrival: false, images: [],
 };
@@ -103,6 +104,7 @@ export default function DetailsPage() {
       const { error } = await supabase.from('products').insert({
         name: form.name,
         description: form.description,
+        description_fr: form.descriptionFr,
         price: Number(form.price),
         sale_price: form.salePrice ? Number(form.salePrice) : null,
         category: form.category,
@@ -169,8 +171,13 @@ export default function DetailsPage() {
             </div>
 
             <div className='space-y-1.5'>
-              <Label>{t('details.description')} *</Label>
+              <Label>{t('details.descriptionEn')} *</Label>
               <Textarea value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} placeholder={t('details.descPlaceholder')} rows={3} required />
+            </div>
+
+            <div className='space-y-1.5'>
+              <Label>{t('details.descriptionFr')} *</Label>
+              <Textarea value={form.descriptionFr} onChange={(e) => setForm({ ...form, descriptionFr: e.target.value })} placeholder={t('details.descPlaceholderFr')} rows={3} required />
             </div>
 
             <div className='grid grid-cols-2 gap-4'>
