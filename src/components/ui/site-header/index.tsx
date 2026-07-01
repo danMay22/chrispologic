@@ -22,9 +22,9 @@ export function SiteHeader() {
 
   return (
     <header className='bg-background/80 backdrop-blur-lg sticky top-0 z-40 w-full border-b transition-all duration-200'>
-      <div className='w-full px-10 flex h-16 items-center justify-between'>
-        <Link href='/' className='flex items-center'>
-          <span className='font-sans text-[2rem] font-black tracking-widest uppercase border border-current px-2 py-0.5'>
+      <div className='w-full px-4 sm:px-10 flex h-14 sm:h-16 items-center justify-between'>
+        <Link href='/' className='flex items-center shrink-0'>
+          <span className='font-sans text-base sm:text-xl lg:text-[1.5rem] font-black tracking-widest uppercase border border-current px-1.5 sm:px-2 py-0.5'>
             Pax Clothing
           </span>
         </Link>
@@ -44,7 +44,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className='flex items-center gap-2 border-l pl-3'>
+        <div className='flex items-center gap-1.5 sm:gap-2 border-l pl-2 sm:pl-3'>
           <LanguageToggle />
           <ModeToggle />
           <div className='lg:hidden ml-1'>
