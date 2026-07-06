@@ -49,7 +49,7 @@ export default function ContactPage() {
   ];
 
   const divider = (
-    <div className='flex items-center px-10'>
+    <div className='flex items-center px-4 sm:px-10'>
       <div className='h-px flex-1' style={{ background: 'linear-gradient(to right, transparent, hsl(var(--border)) 20%, hsl(var(--border)) 80%, transparent)' }} />
     </div>
   );
@@ -57,15 +57,15 @@ export default function ContactPage() {
   return (
     <>
       {/* ── Our Story ── */}
-      <section className='py-20'>
-        <div className='px-10 max-w-7xl mx-auto'>
+      <section className='py-12 sm:py-20'>
+        <div className='px-4 sm:px-10 max-w-7xl mx-auto'>
           <div className='relative grid-cols-3 gap-20 lg:grid'>
             <div className='lg:col-span-2'>
               <Badge variant='outline' className='rounded-none uppercase tracking-widest text-xs'>{t('story.badge')}</Badge>
-              <h1 className='mt-3 font-sans text-4xl font-black uppercase tracking-widest max-lg:text-3xl'>{t('story.title')}</h1>
+              <h1 className='mt-3 font-sans text-3xl sm:text-4xl font-black uppercase tracking-widest'>{t('story.title')}</h1>
               <p className='mt-3 text-lg text-muted-foreground max-w-xl'>{t('story.intro')}</p>
 
-              <div className='my-8 aspect-[16/6] w-full overflow-hidden'>
+              <div className='my-8 aspect-[16/9] sm:aspect-[16/6] w-full overflow-hidden'>
                 <img src='/image/pexels-pixabay-264726.jpg' alt='Pax Clothing' className='h-full w-full object-cover object-center' />
               </div>
 
@@ -140,16 +140,16 @@ export default function ContactPage() {
       {divider}
 
       {/* ── Contact ── */}
-      <section className='py-20'>
-        <div className='px-10 max-w-7xl mx-auto'>
+      <section className='py-12 sm:py-20'>
+        <div className='px-4 sm:px-10 max-w-7xl mx-auto'>
           <div className='mb-12'>
             <p className='text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-2'>{t('contact.label')}</p>
-            <h2 className='font-sans text-4xl font-black uppercase tracking-widest max-lg:text-3xl'>{t('contact.title')}</h2>
+            <h2 className='font-sans text-3xl sm:text-4xl font-black uppercase tracking-widest'>{t('contact.title')}</h2>
             <p className='mt-3 text-muted-foreground max-w-lg'>{t('contact.sub')}</p>
           </div>
-          <div className='grid gap-4 md:grid-cols-2'>
+          <div className='grid gap-4 grid-cols-1 sm:grid-cols-2'>
             {contactCards.map((item) => (
-              <div key={item.label} className='bg-muted/50 p-8 border'>
+              <div key={item.label} className='bg-muted/50 p-5 sm:p-8 border'>
                 <div className='mb-4'>{item.icon}</div>
                 <p className='font-sans font-black uppercase tracking-wider text-sm mb-1'>{item.label}</p>
                 <p className='text-sm text-muted-foreground mb-4'>{item.desc}</p>
@@ -163,11 +163,11 @@ export default function ContactPage() {
       {divider}
 
       {/* ── FAQ ── */}
-      <section id='faq' className='py-20'>
-        <div className='px-10 max-w-3xl mx-auto'>
+      <section id='faq' className='py-12 sm:py-20'>
+        <div className='px-4 sm:px-10 max-w-3xl mx-auto'>
           <div className='mb-10'>
             <p className='text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-2'>{t('faq.label')}</p>
-            <h2 className='font-sans text-4xl font-black uppercase tracking-widest max-lg:text-3xl'>{t('faq.title')}</h2>
+            <h2 className='font-sans text-3xl sm:text-4xl font-black uppercase tracking-widest'>{t('faq.title')}</h2>
           </div>
           <Accordion type='single' collapsible>
             {faqItems.map((item, i) => (

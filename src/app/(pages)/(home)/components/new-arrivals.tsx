@@ -40,9 +40,9 @@ export default function NewArrivals() {
   }, [carouselApi]);
 
   return (
-    <section className='py-20'>
-      <div className='px-10'>
-        <div className='mb-10 flex flex-col justify-between md:flex-row md:items-end'>
+    <section className='py-12 sm:py-20'>
+      <div className='px-4 sm:px-10'>
+        <div className='mb-8 sm:mb-10 flex flex-col justify-between md:flex-row md:items-end'>
           <div>
             <p className='text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-2'>{t('arrivals.label')}</p>
             <h2 className='font-sans text-4xl font-black uppercase tracking-widest max-lg:text-3xl'>{t('arrivals.title')}</h2>
@@ -58,9 +58,9 @@ export default function NewArrivals() {
         </div>
       </div>
       <Carousel setApi={setCarouselApi} opts={{ dragFree: true }} className='w-full'>
-        <CarouselContent className='-ml-0 pl-10'>
+        <CarouselContent className='-ml-0 pl-4 sm:pl-10'>
           {newArrivals.map((item) => (
-            <CarouselItem key={item.id} className='pl-6 md:basis-[380px] basis-[300px]'>
+            <CarouselItem key={item.id} className='pl-4 sm:pl-6 basis-[260px] sm:basis-[300px] md:basis-[380px]'>
               <div className='group cursor-pointer'>
                 <div className='relative aspect-[3/4] overflow-hidden bg-muted'>
                   <img src={item.image} alt={item.title} className='h-full w-full object-cover object-center transition duration-500 group-hover:scale-105' />

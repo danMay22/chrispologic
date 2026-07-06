@@ -139,8 +139,8 @@ export default function DetailsPage() {
   const isUploading = uploadingCount > 0;
 
   return (
-    <div className='min-h-screen px-6 py-10 max-w-4xl mx-auto'>
-      <div className='mb-8 flex items-start justify-between gap-4'>
+    <div className='min-h-screen px-4 sm:px-6 py-10 max-w-4xl mx-auto'>
+      <div className='mb-8 flex flex-col sm:flex-row sm:items-start justify-between gap-4'>
         <div>
           <div className='flex items-center gap-2 mb-1'>
             <ShieldAlert className='size-4 text-amber-500' />
@@ -180,7 +180,7 @@ export default function DetailsPage() {
               <Textarea value={form.descriptionFr} onChange={(e) => setForm({ ...form, descriptionFr: e.target.value })} placeholder={t('details.descPlaceholderFr')} rows={3} required />
             </div>
 
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
               <div className='space-y-1.5'>
                 <Label>{t('details.price')} *</Label>
                 <Input type='number' value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })} placeholder='450' required />

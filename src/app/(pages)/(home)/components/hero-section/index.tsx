@@ -29,7 +29,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-          className='font-sans text-6xl font-black uppercase tracking-widest text-white max-w-4xl leading-tight max-lg:text-4xl'
+          className='font-sans text-4xl sm:text-6xl font-black uppercase tracking-widest text-white max-w-4xl leading-tight'
         >
           {t('hero.headline1')}
           <br />
@@ -47,12 +47,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
-          className='mt-10 flex items-center gap-4 max-lg:flex-col'
+          className='mt-10 flex items-center gap-4 max-sm:flex-col max-sm:w-full'
         >
-          <Link href='/#new-arrivals' className='bg-white text-black font-bold uppercase tracking-widest px-10 py-3 text-sm hover:bg-white/90 transition-fast active:scale-95 gpu'>
+          <Link href='/#new-arrivals' className='bg-white text-black font-bold uppercase tracking-widest px-10 py-3 text-sm hover:bg-white/90 transition-fast active:scale-95 gpu max-sm:w-full max-sm:text-center'>
             {t('hero.shopBtn')}
           </Link>
-          <Link href='/contact' className='border border-white text-white font-bold uppercase tracking-widest px-10 py-3 text-sm hover:bg-white/10 transition-fast active:scale-95 gpu'>
+          <Link href='/contact' className='border border-white text-white font-bold uppercase tracking-widest px-10 py-3 text-sm hover:bg-white/10 transition-fast active:scale-95 gpu max-sm:w-full max-sm:text-center'>
             {t('hero.storyBtn')}
           </Link>
         </motion.div>

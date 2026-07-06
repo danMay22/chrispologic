@@ -61,12 +61,12 @@ export default function ProductPage() {
   const inStock = product.sizes.some((s) => s.stock === 'IN_STOCK');
 
   return (
-    <section className='py-16 px-10 max-w-7xl mx-auto'>
-      <button onClick={() => router.back()} className='mb-8 text-xs font-semibold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-fast'>
+    <section className='py-10 sm:py-16 px-4 sm:px-10 max-w-7xl mx-auto'>
+      <button onClick={() => router.back()} className='mb-6 sm:mb-8 text-xs font-semibold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-fast'>
         {t('product.back')}
       </button>
 
-      <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-2'>
         {/* Image gallery */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -109,10 +109,10 @@ export default function ProductPage() {
                 {product.badge}
               </span>
             )}
-            <h1 className='font-sans text-4xl font-black uppercase tracking-widest leading-tight max-lg:text-3xl'>{product.name}</h1>
+            <h1 className='font-sans text-2xl sm:text-4xl font-black uppercase tracking-widest leading-tight'>{product.name}</h1>
           </div>
 
-          <div className='flex items-center gap-4'>
+          <div className='flex flex-wrap items-center gap-3 sm:gap-4'>
             <Stars rate={4} />
             <span className='text-sm text-muted-foreground'>4.0 · 24 {t('product.reviews')}</span>
             {inStock ? (

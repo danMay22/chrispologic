@@ -64,26 +64,26 @@ export default function CategoriesAndProducts() {
   return (
     <>
       {/* Gradient divider */}
-      <div className='flex items-center px-10'>
+      <div className='flex items-center px-4 sm:px-10'>
         <div className='h-px flex-1' style={{ background: 'linear-gradient(to right, transparent, hsl(var(--border)) 20%, hsl(var(--border)) 80%, transparent)' }} />
       </div>
 
       {/* Categories */}
       <section className='py-10'>
-        <div className='px-10'>
-          <div className='mb-6 flex items-center justify-between gap-4'>
+        <div className='px-4 sm:px-10'>
+          <div className='mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4'>
             <div>
               <p className='text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-1'>{t('categories.label')}</p>
               <h2 className='font-sans text-3xl font-black uppercase tracking-widest'>{t('categories.title')}</h2>
             </div>
           </div>
-          <div className='grid gap-3 grid-cols-2 sm:grid-cols-4 lg:grid-cols-8'>
+          <div className='grid gap-2 sm:gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8'>
             {CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActive(cat.id)}
                 className={cn(
-                  'flex items-center gap-2 border px-4 py-2.5 text-sm font-semibold uppercase tracking-wider transition-all duration-150 active:scale-95 gpu',
+                  'flex items-center justify-center gap-1.5 border px-3 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-150 active:scale-95 gpu',
                   active === cat.id ? 'bg-foreground text-background border-foreground' : 'bg-background text-foreground border-border hover:bg-muted',
                 )}
               >
@@ -96,7 +96,7 @@ export default function CategoriesAndProducts() {
 
       {/* Search + Filters */}
       <section className='pb-6'>
-        <div className='px-10'>
+        <div className='px-4 sm:px-10'>
           <div className='flex flex-col sm:flex-row gap-3 items-stretch sm:items-center'>
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground' />
@@ -172,7 +172,7 @@ export default function CategoriesAndProducts() {
 
       {/* Product Grid */}
       <section className='pb-16'>
-        <div className='px-10'>
+        <div className='px-4 sm:px-10'>
           <div className='mb-4 flex items-center justify-between'>
             <p className='text-sm text-muted-foreground'>
               {t('filter.showing')} <span className='font-bold text-foreground'>{filtered.length}</span> {filtered.length !== 1 ? t('filter.items') : t('filter.item')}
